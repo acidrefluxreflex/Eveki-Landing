@@ -4,8 +4,11 @@ import SVGAnimation from "./SVGAnimation";
 
 const SVGBack = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const svgPath =
-    "M25,20 C25,5 60,5 60,20 C60,35 25,35 25,50 C25,65 60,65 60,50";
+  const pathData = [
+    "M15.75 5H8.25C7.55964 5 7 5.58763 7 6.3125V19L12 15.5L17 19V6.3125C17 5.58763 16.4404 5 15.75 5Z",
+  ];
+
+  const isRounded = true;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,15 +30,13 @@ const SVGBack = () => {
         border: "none",
         padding: "0",
         marginLeft: "auto",
-        marginRight: "auto"
+        marginRight: "auto",
       }}
     >
-        <div>
-      <h1>Welcome to my website</h1>
-      <SVGAnimation
-        pathData={svgPath}
-      />
-    </div>
+      <div>
+        <h1>Welcome to my website</h1>
+        <SVGAnimation pathData={pathData} isRounded={isRounded} />
+      </div>
       <motion.svg
         style={{ width: "80%", height: "80%" }}
         viewBox="0 0 480 480"
@@ -49,7 +50,6 @@ const SVGBack = () => {
             transition={{
               duration: 2,
               ease: "easeInOut",
-           
             }}
             strokeWidth={4}
             strokeDasharray="0 1"

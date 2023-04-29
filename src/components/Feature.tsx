@@ -10,7 +10,12 @@ interface FeatureProps {
   isLeft?: Boolean; // 追加
 }
 
-const Feature: FC<FeatureProps> = ({ icon, title, description, isLeft = false }) => {
+const Feature: FC<FeatureProps> = ({
+  icon,
+  title,
+  description,
+  isLeft = false,
+}) => {
   const { ref, inView } = useInView({
     threshold: 0.2,
     triggerOnce: true,
@@ -33,14 +38,14 @@ const Feature: FC<FeatureProps> = ({ icon, title, description, isLeft = false })
 
   return (
     <motion.div
-      className="w-full md:w-1/3 p-4"
+      className="w-full p-4 md:w-1/3"
       ref={ref}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       variants={variants}
     >
-      <div className="flex items-center mb-4">
-        <div className="w-16 h-16 mr-4">
+      <div className="mb-4 flex items-center">
+        <div className="mr-4 h-16 w-16">
           <Image src={icon} alt={title} width={64} height={64} />
         </div>
         <h2 className="text-xl font-bold">{title}</h2>

@@ -1,22 +1,25 @@
-import React from 'react';
+import React from "react";
+import testImage from "../images/tmpa2m_qwih.png";
 
 const Hero: React.FC = () => {
   return (
     <div
-      className="h-screen flex items-center justify-center"
+      className="inset-0 flex h-screen items-center justify-center"
       style={{
-        backgroundImage: `url('/images/hero.jpg')`,
+        backgroundImage: `url(${testImage.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
       <div className="animate-fade-in">
-        <h1 className="text-4xl md:text-6xl text-white font-bold mb-4">
+        <h1 className="mb-4 text-4xl font-bold text-white md:text-6xl">
           Your Hero Message Here
         </h1>
-        <p className="text-lg md:text-xl text-white font-medium mb-8">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua.
+        <p className="mb-8 text-lg font-medium text-white md:text-xl">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <button className="bg-blue-500 text-white py-3 px-6 rounded-lg hover:bg-blue-600">
+        <button className="rounded-lg bg-blue-500 px-6 py-3 text-white hover:bg-blue-600">
           Call to Action
         </button>
       </div>

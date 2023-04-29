@@ -6,7 +6,6 @@ const features = [
     icon: "/images/feature1.png",
     title: "Feature 1",
     description: "This is feature 1",
-    
   },
   {
     icon: "/images/feature2.png",
@@ -25,8 +24,8 @@ const FeaturesSection: FC = () => {
   return (
     <>
       <div className="container mx-auto">
-        <h1 className="text-3xl font-bold mb-10">Features</h1>
-        <div >
+        <h1 className="mb-10 text-3xl font-bold">Features</h1>
+        <div>
           {features.map((feature) => (
             <Feature
               key={feature.title}
