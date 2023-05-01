@@ -2,12 +2,13 @@ import { FC } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import FeatureCell from "./FeatureCell";
 
 interface FeatureProps {
   icon: string;
   title: string;
   description: string;
-  isLeft?: Boolean; // 追加
+  isLeft?: boolean;
 }
 
 const Feature: FC<FeatureProps> = ({
@@ -21,37 +22,52 @@ const Feature: FC<FeatureProps> = ({
     triggerOnce: true,
   });
 
+  const size = 520;
+
   const variants = {
     hidden: {
       opacity: 0,
-      x: isLeft ? "-30%" : "30%",
+      x: isLeft ? 100 : -100,
     },
     visible: {
       opacity: 1,
       x: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: "easeInOut",
       },
     },
   };
 
   return (
-    <div className="h-screen">
+    <div className="flex justify-center">
       <motion.div
-        className="w-full p-4 md:w-1/3"
+        className="p-4"
         ref={ref}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         variants={variants}
+        //custom={isLeft ? -1 : 1} // isLeft が true の場合は -1, そうでない場合は 1 を渡す
+        style={{
+          width: "100%", // 親要素の幅いっぱいに伸ばす
+          display: "flex",
+          flexDirection: isLeft ? "row-reverse" : "row", // isLeft が true の場合は逆向きに並べる
+          alignItems: "center", // 子要素を中央揃えにする
+        }}
       >
-        <div className="mb-4 flex items-center">
-          <div className="mr-4 h-16 w-16">
-            <Image src={icon} alt={title} width={64} height={64} />
-          </div>
-          <h2 className="text-xl font-bold">{title}</h2>
+        <div className="p-6">
+          <h2 className="text-3xl font-medium">{title}</h2>
+          <p className="mt-4">{description}</p>
         </div>
-        <p className="text-gray-700">{description}</p>
+        <div className="h-98 relative items-center justify-center md:w-1/2">
+          <Image
+            src={icon}
+            alt=""
+            height={size}
+            width={size}
+            className="rounded-xl shadow-lg"
+          />
+        </div>
       </motion.div>
     </div>
   );

@@ -1,20 +1,21 @@
 import { FC } from "react";
 import Feature from "./Feature";
+import image from  "../images/icon.png"
 
 const features = [
   {
-    icon: "/images/feature1.png",
+    icon: "/images/icon.png",
     title: "Feature 1",
     description: "This is feature 1",
   },
   {
-    icon: "/images/feature2.png",
+    icon: "/images/bubbles.jpg",
     title: "Feature 2",
     description: "This is feature 2",
     isLeft: true,
   },
   {
-    icon: "/images/feature3.png",
+    icon: "/images/icon.png",
     title: "Feature 3",
     description: "This is feature 3",
   },
@@ -23,7 +24,7 @@ const features = [
 const FeaturesSection: FC = () => {
   return (
     <>
-      <div className="container mx-auto">
+      <div className="container">
         <h1 className="mb-10 text-3xl font-bold">Features</h1>
         <div>
           {features.map((feature) => (

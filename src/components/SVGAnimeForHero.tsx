@@ -10,16 +10,7 @@ const SVGAnimation = ({ pathData, isRounded = false }: Props) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
-      if (currentScrollPos > 300) {
-        setIsVisible(true);
-        window.removeEventListener("scroll", handleScroll);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    setIsVisible(true);
   }, []);
 
   return (
@@ -57,7 +48,6 @@ const SVGAnimation = ({ pathData, isRounded = false }: Props) => {
               d={d}
             />
           ))}
-          
       </motion.svg>
     </div>
   );
