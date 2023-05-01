@@ -50,12 +50,14 @@ const SVGAnimation = ({ pathData, isRounded = false }: Props) => {
                 duration: 2,
                 ease: "easeInOut",
               }}
-              strokeWidth={2}
+              strokeWidth={0.5}
               strokeDasharray="0 1"
-              fill="none"
+              fill="#bf4d00"
+              fill-rule="evenodd"
               d={d}
             />
           ))}
+          
       </motion.svg>
     </div>
   );

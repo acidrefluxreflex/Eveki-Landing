@@ -37,21 +37,23 @@ const Feature: FC<FeatureProps> = ({
   };
 
   return (
-    <motion.div
-      className="w-full p-4 md:w-1/3"
-      ref={ref}
-      initial="hidden"
-      animate={inView ? "visible" : "hidden"}
-      variants={variants}
-    >
-      <div className="mb-4 flex items-center">
-        <div className="mr-4 h-16 w-16">
-          <Image src={icon} alt={title} width={64} height={64} />
+    <div className="h-screen">
+      <motion.div
+        className="w-full p-4 md:w-1/3"
+        ref={ref}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={variants}
+      >
+        <div className="mb-4 flex items-center">
+          <div className="mr-4 h-16 w-16">
+            <Image src={icon} alt={title} width={64} height={64} />
+          </div>
+          <h2 className="text-xl font-bold">{title}</h2>
         </div>
-        <h2 className="text-xl font-bold">{title}</h2>
-      </div>
-      <p className="text-gray-700">{description}</p>
-    </motion.div>
+        <p className="text-gray-700">{description}</p>
+      </motion.div>
+    </div>
   );
 };
 

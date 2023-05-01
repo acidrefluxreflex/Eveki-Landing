@@ -1,3 +1,4 @@
+/*
 import type { Meta, StoryObj } from "@storybook/react";
 
 import Feature from "../Feature";
@@ -29,3 +30,4 @@ export const Large: Story = {
 export const Small: Story = {
   args: {},
 };
+*/

@@ -1,5 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
+
 
 const Navbar: React.FC = () => {
   const [isTop, setIsTop] = useState(true);
@@ -36,10 +38,10 @@ const Navbar: React.FC = () => {
           <span className="ml-3 text-xl">Eveki</span>
         </a>
         <nav className="flex flex-wrap items-center justify-center text-base md:ml-auto md:mr-auto">
-          <a className="mr-5 hover:text-gray-900">First Link</a>
-          <a className="mr-5 hover:text-gray-900">Second Link</a>
-          <a className="mr-5 hover:text-gray-900">Third Link</a>
-          <a className="mr-5 hover:text-gray-900">Fourth Link</a>
+          <Link href="/" className="mr-5 hover:text-gray-900">First Link</Link>
+          <Link href="/" className="mr-5 hover:text-gray-900">Second Link</Link>
+          <Link href="/" className="mr-5 hover:text-gray-900">Third Link</Link>
+          <Link href="/" className="mr-5 hover:text-gray-900">Fourth Link</Link>
         </nav>
       </div>
     </header>
