@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
   return (
     <div
       className={`fixed top-0 z-10  ${
-        isTop ? "bg-transparent" : "bg-blue-500"
+        isTop ? "bg-transparent" : "bg-primary"
       } 
       ${
         isTop ? " text-black" : "text-white"
@@ -32,6 +32,7 @@ const Navbar: React.FC = () => {
           <Link href="/" className="ml-3 text-3xl">Eveki</Link>
           </div>
         </div>
+        
 
         <div className="flex-none">
         <nav className="menu menu-horizontal px-1">

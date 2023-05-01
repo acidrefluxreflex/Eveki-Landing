@@ -2,8 +2,7 @@
 
 import Hero from "@/components/Hero";
 import FeatureSection from "@/components/FeatureSection";
-import Navbar from "../components/NavVar";
-import TopicSection from "@/components/TopicSection";
+import AnimatedSVG from "@/components/AnimatedGradient";
 
 
 export default function Home() {
@@ -14,7 +13,7 @@ export default function Home() {
    
       <div className="w-3/4  justify-center items-center">
     
-         
+
         <FeatureSection />
 
       </div>

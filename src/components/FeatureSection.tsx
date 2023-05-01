@@ -5,7 +5,7 @@ import image from  "../images/icon.png"
 const features = [
   {
     icon: "/images/icon.png",
-    title: "Feature 1",
+    title: "個性の構築",
     description: "This is feature 1",
   },
   {

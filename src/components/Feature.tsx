@@ -40,7 +40,7 @@ const Feature: FC<FeatureProps> = ({
   };
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center py-5">
       <motion.div
         className="p-4"
         ref={ref}
