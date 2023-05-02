@@ -10,14 +10,14 @@ const features = [
   },
   {
     icon: "/images/bubbles.jpg",
-    title: "Feature 2",
-    description: "This is feature 2",
+    title: "個性豊かな会話を楽しむ",
+    description: "AIの設定や口調は自分で自由に決めることができます。\n好きなキャラクターや有名人を再現したり、理想の友達を作ることも可能です。",
     isLeft: true,
   },
   {
     icon: "/images/icon.png",
-    title: "Feature 3",
-    description: "This is feature 3",
+    title: "AIをシェア",
+    description: "自分が作成したAIはQRコードで簡単に共有することができます。",
   },
 ];
 
@@ -25,7 +25,6 @@ const FeaturesSection: FC = () => {
   return (
     <>
       <div className="container">
-        <h1 className="mb-10 text-3xl font-bold">Features</h1>
         <div>
           {features.map((feature) => (
             <Feature

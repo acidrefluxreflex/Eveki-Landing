@@ -19,12 +19,12 @@ const FeatureCell: FC<FeatureProps> = ({
   const size = 520;
 
   return (
-    <div>
-      <div className="p-6">
+    <div className="w-3/4">
+      <div className="p-6 w-46">
         <h2 className="text-3xl font-medium">{title}</h2>
         <p className="mt-4">{text}</p>
       </div>
-      <div className="relative justify-center items-center h-98 md:w-1/2">
+      <div className="relative justify-center items-center h-98 w-1/2">
         <Image
           src={imageSrc}
           alt={altText}
