@@ -2,7 +2,7 @@ import { FC } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import FeatureCell from "./FeatureCell";
+
 
 interface FeatureProps {
   icon: string;
@@ -22,7 +22,7 @@ const Feature: FC<FeatureProps> = ({
     triggerOnce: true,
   });
 
-  const size = 520;
+  const size = 420;
 
   const variants = {
     hidden: {
@@ -31,7 +31,7 @@ const Feature: FC<FeatureProps> = ({
     },
     visible: {
       opacity: 1,
-      x: 0,
+      x: 10,
       transition: {
         duration: 0.8,
         ease: "easeInOut",
@@ -55,11 +55,11 @@ const Feature: FC<FeatureProps> = ({
           alignItems: "center", // 子要素を中央揃えにする
         }}
       >
-        <div className="p-6">
+        <div className="w-96 p-6">
           <h2 className="text-3xl font-medium">{title}</h2>
           <p className="mt-4">{description}</p>
         </div>
-        <div className="h-98 relative items-center justify-center md:w-1/2">
+        <div className="h-98 relative items-center justify-center ">
           <Image
             src={icon}
             alt=""

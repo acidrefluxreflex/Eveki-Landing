@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Feature from "./Feature";
-import image from  "../images/icon.png"
+
 
 const features = [
   {
@@ -17,7 +17,7 @@ const features = [
   {
     icon: "/images/icon.png",
     title: "AIをシェア",
-    description: "自分が作成したAIはQRコードで簡単に共有することができます。",
+    description: "作成したAIはQRコードで簡単に共有することが可能。\n画像としてSNSにシェアできるAIカードも生成することができます。",
   },
 ];
 
@@ -25,6 +25,7 @@ const FeaturesSection: FC = () => {
   return (
     <>
       <div className="container">
+        
         <div>
           {features.map((feature) => (
             <Feature

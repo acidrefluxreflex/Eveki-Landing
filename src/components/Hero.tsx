@@ -1,8 +1,7 @@
 import React from "react";
-import testImage from "../images/tmpa2m_qwih.png";
+
 import Image from "next/image";
-import ZStack from "./base/ZStack";
-import SVGAnimation from "./SVGAnimeForHero";
+
 
 const Hero: React.FC = () => {
   const pathData = [
@@ -24,7 +23,7 @@ const Hero: React.FC = () => {
           <div className="mb-8  px-2 text-lg font-medium text-black">
             <p>誰でも自分だけのAIを気軽に</p>
             <p>カスタマイズする世界へ</p>
-            <button className="btn">Button</button>
+            <button className="btn my-5">ダウンロード</button>
           </div>
         </div>
         <Image

@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
   return (
     <div
       className={`fixed top-0 z-10  ${
-        isTop ? "bg-transparent" : "bg-primary"
+        isTop ? "bg-transparent" : "bg-primary backdrop-blur-lg backdrop-filter bg-opacity-80 drop-shadow-2xl border-solid"
       } 
       ${
         isTop ? " text-black" : "text-white"

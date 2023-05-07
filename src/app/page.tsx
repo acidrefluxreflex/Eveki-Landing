@@ -2,7 +2,9 @@
 
 import Hero from "@/components/Hero";
 import FeatureSection from "@/components/FeatureSection";
-import AnimatedSVG from "@/components/AnimatedGradient";
+
+import HowToUseSection from "@/components/HowtoUse";
+import ContactForm from "@/components/ContactForm";
 
 
 
@@ -16,7 +18,8 @@ export default function Home() {
     
 
         <FeatureSection />
-
+<HowToUseSection />
+<ContactForm />
       </div>
   
     </main>
