@@ -1,16 +1,12 @@
 "use client";
 
-import Hero from "@/components/Hero";
-import FeatureSection from "@/components/FeatureSection";
-
-import TopicSection from "@/components/TopicSection";
-import App from "@/components/Triangle";
-
+import "./style.css";
+import Home from "@/components/TestMark";
 
 export default function About() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
-    <App />
-   </main>
+    <main className="flex min-h-screen flex-col items-center justify-between py-12">
+      <Home mdPath="/contents/about.md" />
+    </main>
   );
 }
