@@ -4,9 +4,9 @@ import Feature from "./Feature";
 
 const features = [
   {
-    icon: "/images/icon.png",
-    title: "個性の構築",
-    description: "This is feature 1",
+    icon: "/images/cards.jpg",
+    title: "AIをシェア",
+    description: "作成したAIはQRコードで簡単に共有することが可能。\n画像としてSNSにシェアできるAIカードも生成することができます。",
   },
   {
     icon: "/images/bubbles.jpg",
@@ -15,10 +15,12 @@ const features = [
     isLeft: true,
   },
   {
-    icon: "/images/icon.png",
-    title: "AIをシェア",
-    description: "作成したAIはQRコードで簡単に共有することが可能。\n画像としてSNSにシェアできるAIカードも生成することができます。",
+    icon: "/images/form.jpg",
+    title: "個性の構築",
+    description: "This is feature 1",
   },
+  
+ 
 ];
 
 const FeaturesSection: FC = () => {

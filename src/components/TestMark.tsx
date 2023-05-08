@@ -20,6 +20,7 @@ const MarkdownContent = ({ mdPath }: Props) => {
   }, []);
 
   return (
+
     <div id="content" className="lg:w-2/5 ">
       <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
     </div>
