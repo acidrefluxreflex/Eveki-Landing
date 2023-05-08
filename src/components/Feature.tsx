@@ -47,15 +47,15 @@ const Feature: FC<FeatureProps> = ({
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         variants={variants}
-        //custom={isLeft ? -1 : 1} // isLeft が true の場合は -1, そうでない場合は 1 を渡す
+
         style={{
-          width: "100%", // 親要素の幅いっぱいに伸ばす
+          //width: "100%", // 親要素の幅いっぱいに伸ばす
           display: "flex",
           flexDirection: isLeft ? "row-reverse" : "row", // isLeft が true の場合は逆向きに並べる
           alignItems: "center", // 子要素を中央揃えにする
         }}
       >
-        <div className="w-96 p-6">
+        <div className="w-96 p-6 m-7">
           <h2 className="text-3xl font-medium">{title}</h2>
           <p className="mt-4">{description}</p>
         </div>

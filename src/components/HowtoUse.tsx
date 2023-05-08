@@ -7,12 +7,10 @@ import { useInView } from "react-intersection-observer";
 type Props = {};
 
 const HowToUseSection: React.FC<Props> = () => {
-
-
-    const [ref, inView] = useInView({
-        triggerOnce: true,
-        threshold: 0.3,
-      });
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
 
   const contentVariants = {
     hidden: {
@@ -32,7 +30,7 @@ const HowToUseSection: React.FC<Props> = () => {
     <section className="py-20" ref={ref}>
       <motion.div
         initial="hidden"
-animate={inView ? "visible" : "hidden"}   
+        animate={inView ? "visible" : "hidden"}
         variants={{
           visible: {
             transition: {
@@ -41,11 +39,11 @@ animate={inView ? "visible" : "hidden"}
           },
         }}
       >
-        <div className="container mx-auto">
-          <div className="mx-4 flex">
+        <div className="container mx-auto w-3/5 items-center justify-center">
+          <div className="flex">
             <motion.div
               id="CARD"
-              className="mb-4 w-full px-4 lg:w-1/2"
+              className="mb-4 pr-4 lg:w-1/2"
               variants={contentVariants}
             >
               <div className="card border-0 shadow-md">
@@ -93,7 +91,7 @@ animate={inView ? "visible" : "hidden"}
 
             <motion.div
               id="CARD"
-              className="mb-4 w-full px-4 lg:w-1/2"
+              className="mb-4 w-full pl-4 lg:w-1/2"
               variants={contentVariants}
             >
               <div className="card border-0 shadow-md">

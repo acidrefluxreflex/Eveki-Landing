@@ -24,7 +24,7 @@ const features = [
 const FeaturesSection: FC = () => {
   return (
     <>
-      <div className="container">
+      <div className="container justify-center items-center">
         
         <div>
           {features.map((feature) => (

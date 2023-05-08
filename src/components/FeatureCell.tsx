@@ -22,10 +22,9 @@ const FeatureCell: FC<FeatureProps> = ({
     <div className="flex">
       <div className="p-6 ">
         <h2 className="text-3xl font-medium">{title}</h2>
-        
         <p className="mt-4 w-64">{text}</p>
       </div>
-      <div className="relative justify-center items-center h-98 w-1/2">
+      <div className="h-98 w-1/2">
         <Image
           src={imageSrc}
           alt={altText}
