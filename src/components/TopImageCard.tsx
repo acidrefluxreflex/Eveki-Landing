@@ -1,5 +1,7 @@
-import Image from "next/image";
+
 import { FC } from "react";
+import { FaSearch } from "react-icons/fa";
+import Icon from "@/libs/ReactIcon";
 
 interface Props {
   icon: string;
@@ -10,14 +12,11 @@ interface Props {
 const TopImageCard: FC<Props> = ({ icon, title, description }) => {
   return (
     <div className="card border-0 shadow-md">
-      <figure>
-        <Image src={icon} alt="Shoes" width={925} height={528} />
+      <figure className="w-43">
+        <Icon icon={FaSearch} size="96px" color="white" />
       </figure>
       <div className="card-body">
-        <h1 className="card-title">{title}</h1>
-        <p>
-          {description}
-        </p>
+        <h2 className="card-title">{title}</h2>
       </div>
     </div>
   );
