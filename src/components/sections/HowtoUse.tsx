@@ -44,7 +44,10 @@ const HowToUseSection: React.FC = () => {
   };
 
   return (
-    <section className="hidden py-20 lg:flex items-center justify-center bg-[#0c0c0c] text-white" ref={ref}>
+    <section
+      className="hidden items-center justify-center bg-[#0c0c0c] py-20 text-white lg:flex"
+      ref={ref}
+    >
       <motion.div
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
@@ -56,14 +59,14 @@ const HowToUseSection: React.FC = () => {
           },
         }}
       >
-        <div className="flex mx-48 items-center justify-center ">
+        <div className="mx-48 flex items-center justify-center ">
           <div className="flex">
             {features.map((feature) => (
               <motion.div
                 id="CARD"
-
                 className="mb-4 pr-4 lg:w-1/2"
                 variants={contentVariants}
+                key={feature.title}
               >
                 <TopImageCard
                   key={feature.title}
@@ -74,7 +77,6 @@ const HowToUseSection: React.FC = () => {
               </motion.div>
             ))}
           </div>
-       
         </div>
       </motion.div>
     </section>
