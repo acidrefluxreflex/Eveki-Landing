@@ -40,9 +40,10 @@ const Feature: FC<FeatureProps> = ({
   };
 
   return (
-    <div className="flex justify-center py-5">
+    <div id="BASE">
+    <div className="justify-center py-5 hidden lg:flex">
       <motion.div
-        className="p-4"
+        className="p-4 "
         ref={ref}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
@@ -69,6 +70,26 @@ const Feature: FC<FeatureProps> = ({
           />
         </div>
       </motion.div>
+    </div>
+    <div className="justify-center py-5 items-center lg:hidden">
+      <div
+        className="p-4 min-h-screen"
+      >
+        <div className="w-96 p-6 m-7">
+          <h2 className="text-3xl font-medium">{title}</h2>
+          <p className="">{description}</p>
+        </div>
+        <div className="h-98 relative items-center justify-center ">
+          <Image
+            src={icon}
+            alt=""
+            height={size * 0.8}
+            width={size * 0.8}
+            className="rounded-xl shadow-lg"
+          />
+        </div>
+      </div>
+    </div>
     </div>
   );
 };

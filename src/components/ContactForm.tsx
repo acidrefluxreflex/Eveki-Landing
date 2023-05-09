@@ -34,7 +34,7 @@ const ContactForm: React.FC = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 w-3/5 mx-auto py-7">
+    <form onSubmit={handleSubmit} className="mx-auto w-3/5 space-y-4 py-7">
       <div className="space-y-1">
         <label htmlFor="email" className="font-medium text-gray-700">
           メールアドレス<span className="text-red-600">*</span>

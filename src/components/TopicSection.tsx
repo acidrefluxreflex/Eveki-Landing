@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const TopicSection = () => {
   const controls = useAnimation();
@@ -10,7 +10,7 @@ const TopicSection = () => {
     if (inView) {
       controls.start({
         x: 0,
-        transition: { duration: 1 }
+        transition: { duration: 1 },
       });
     }
   }, [controls, inView]);
@@ -21,7 +21,7 @@ const TopicSection = () => {
         className="h-screen w-full bg-green-500"
         ref={ref}
         animate={controls}
-        initial={{ x: '100%' }}
+        initial={{ x: "100%" }}
         style={{ x: 0 }}
       >
         momo
@@ -29,6 +29,5 @@ const TopicSection = () => {
     </div>
   );
 };
-
 
 export default TopicSection;

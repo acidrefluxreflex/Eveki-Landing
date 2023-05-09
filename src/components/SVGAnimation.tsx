@@ -57,7 +57,6 @@ const SVGAnimation = ({ pathData, isRounded = false }: Props) => {
               d={d}
             />
           ))}
-          
       </motion.svg>
     </div>
   );

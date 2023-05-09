@@ -11,7 +11,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between">
       <Hero />
 
-      <div className="w-full  items-center justify-center">
+      <div className="items-center justify-center">
         <FeatureSection />
         <HowToUseSection />
         <ContactForm />

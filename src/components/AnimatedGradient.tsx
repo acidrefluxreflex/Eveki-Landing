@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 
-
 const AnimatedSVG = () => {
   const container = {
     hidden: { opacity: 0 },
@@ -21,10 +20,9 @@ const AnimatedSVG = () => {
 
   return (
     <motion.div
-
-    initial={{ x: "100%" }}
-    animate={{ x: "0%" }}
-    transition={{ duration: 2, ease: "easeInOut" }}
+      initial={{ x: "100%" }}
+      animate={{ x: "0%" }}
+      transition={{ duration: 2, ease: "easeInOut" }}
     >
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"
@@ -91,15 +89,15 @@ const AnimatedSVG = () => {
           </filter>
         </defs>
         <motion.rect
-        width="700"
-        height="700"
-        fill="url(#ffflux-gradient)"
-        filter="url(#ffflux-filter)"
-        animate={{
-          opacity: [1, 0.5, 1, 0.5, 1],
-          transition: { duration: 2,  repeat: 0 },
-        }}
-      />
+          width="700"
+          height="700"
+          fill="url(#ffflux-gradient)"
+          filter="url(#ffflux-filter)"
+          animate={{
+            opacity: [1, 0.5, 1, 0.5, 1],
+            transition: { duration: 2, repeat: 0 },
+          }}
+        />
       </motion.svg>
     </motion.div>
   );

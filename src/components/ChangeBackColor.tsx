@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 
 const ColorSlide = () => {
   const controls = useAnimation();
@@ -7,7 +7,7 @@ const ColorSlide = () => {
   useEffect(() => {
     controls.start({
       x: 0,
-      transition: { duration: 1 }
+      transition: { duration: 1 },
     });
   }, []);
 
@@ -16,10 +16,11 @@ const ColorSlide = () => {
       <motion.div
         className="h-screen w-full bg-green-500"
         animate={controls}
-        initial={{ x: '100%' }}
+        initial={{ x: "100%" }}
         style={{ x: 0 }}
-      >momo</motion.div>
-   
+      >
+        momo
+      </motion.div>
     </div>
   );
 };

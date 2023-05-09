@@ -27,7 +27,7 @@ const HowToUseSection: React.FC<Props> = () => {
   };
 
   return (
-    <section className="py-20" ref={ref}>
+    <section className="py-20 hidden lg:flex" ref={ref}>
       <motion.div
         initial="hidden"
         animate={inView ? "visible" : "hidden"}

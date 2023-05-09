@@ -9,8 +9,8 @@ const Hero: React.FC = () => {
   const size = 550;
 
   return (
-    <div className="flex h-screen items-center justify-center">
-      <div className="animate-fade-in flex items-center justify-center">
+    <div className="flex h-screen justify-center ">
+      <div className="animate-fade-in items-center sm:block lg:flex ">
         <div
           id="Text Section"
           className="block w-3/4 justify-start px-5 text-left"
