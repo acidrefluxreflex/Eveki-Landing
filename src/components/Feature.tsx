@@ -22,6 +22,10 @@ const Feature: FC<FeatureProps> = ({
   });
 
   const size = 420;
+  const splitText = description.split("\n");
+
+  const leftText = "w-2/5 mr-7 pr-10";
+  const rightText = "w-2/5 ml-7 pl-10";
 
   const variants = {
     hidden: {
@@ -30,7 +34,7 @@ const Feature: FC<FeatureProps> = ({
     },
     visible: {
       opacity: 1,
-      x: 10,
+      x: 0,
       transition: {
         duration: 0.8,
         ease: "easeInOut",
@@ -39,10 +43,10 @@ const Feature: FC<FeatureProps> = ({
   };
 
   return (
-    <div id="BASE">
+    <div id="BASE" >
       <div className="hidden justify-center py-5 lg:flex">
         <motion.div
-          className="p-4 "
+          className="items-center justify-center p-0"
           ref={ref}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
@@ -51,12 +55,17 @@ const Feature: FC<FeatureProps> = ({
             //width: "100%", // 親要素の幅いっぱいに伸ばす
             display: "flex",
             flexDirection: isLeft ? "row-reverse" : "row", // isLeft が true の場合は逆向きに並べる
-            alignItems: "center", // 子要素を中央揃えにする
+            //alignItems: "center", // 子要素を中央揃えにする
           }}
         >
-          <div className="w-2/3 m-7  pr-10">
-            <h2 className="text-3xl font-medium">{title}</h2>
-            <p className="mt-4">{description}</p>
+          <div className={isLeft ? rightText : leftText}>
+            <h2 className="text-4xl font-bold">{title}</h2>
+            {splitText.map((line, index) => (
+              <p key={index} className="mt-4">
+                {line}
+                {index !== splitText.length - 1 && <br />}
+              </p>
+            ))}
           </div>
           <div className="h-98 relative items-center justify-center ">
             <Image

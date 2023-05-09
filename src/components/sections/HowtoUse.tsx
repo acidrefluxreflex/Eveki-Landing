@@ -3,10 +3,27 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import TopImageCard from "../TopImageCard";
 
-type Props = {};
+const features = [
+  {
+    icon: "/images/robots.jpg",
+    title: "AIをシェア",
+    description: `momo`,
+  },
+  {
+    icon: "/images/robots.jpg",
+    title: "個性豊かな会話を楽しむ",
+    description: `momo`,
+  },
+  {
+    icon: "/images/robots.jpg",
+    title: "個性の構築",
+    description: `momo`,
+  },
+];
 
-const HowToUseSection: React.FC<Props> = () => {
+const HowToUseSection: React.FC = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.3,
@@ -27,7 +44,7 @@ const HowToUseSection: React.FC<Props> = () => {
   };
 
   return (
-    <section className="py-20 hidden lg:flex" ref={ref}>
+    <section className="hidden py-20 lg:flex items-center justify-center bg-slate-900" ref={ref}>
       <motion.div
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
@@ -39,87 +56,24 @@ const HowToUseSection: React.FC<Props> = () => {
           },
         }}
       >
-        <div className="container mx-auto w-3/5 items-center justify-center">
+        <div className="flex mx-48 items-center justify-center ">
           <div className="flex">
-            <motion.div
-              id="CARD"
-              className="mb-4 pr-4 lg:w-1/2"
-              variants={contentVariants}
-            >
-              <div className="card border-0 shadow-md">
-                <figure>
-                  <Image
-                    src="/images/robots.jpg"
-                    alt="Shoes"
-                    width={925}
-                    height={528}
-                  />
-                </figure>
-                <div className="card-body">
-                  <h1 className="card-title">Feature 1</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Duis nec dolor eu libero hendrerit tempor.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              id="CARD"
-              className="mb-4 w-full px-4 lg:w-1/2"
-              variants={contentVariants}
-            >
-              <div className="card border-0 shadow-md">
-                <figure>
-                  <Image
-                    src="/images/robots.jpg"
-                    alt="Shoes"
-                    width={925}
-                    height={528}
-                  />
-                </figure>
-                <div className="card-body">
-                  <h1 className="card-title">Feature 1</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Duis nec dolor eu libero hendrerit tempor.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              id="CARD"
-              className="mb-4 w-full pl-4 lg:w-1/2"
-              variants={contentVariants}
-            >
-              <div className="card border-0 shadow-md">
-                <figure>
-                  <Image
-                    src="/images/robots.jpg"
-                    alt="Shoes"
-                    width={925}
-                    height={528}
-                  />
-                </figure>
-                <div className="card-body">
-                  <h1 className="card-title">Feature 1</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Duis nec dolor eu libero hendrerit tempor.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
+            {features.map((feature) => (
+              <motion.div
+                id="CARD"
+                className="mb-4 pr-4 lg:w-1/2"
+                variants={contentVariants}
+              >
+                <TopImageCard
+                  key={feature.title}
+                  icon={feature.icon}
+                  title={feature.title}
+                  description={feature.description}
+                />
+              </motion.div>
+            ))}
           </div>
-          <div className="mt-12 text-center">
-            <div className="button">
-              <Link href="" className="inline-flex items-center">
-                button
-              </Link>
-            </div>
-          </div>
+       
         </div>
       </motion.div>
     </section>
