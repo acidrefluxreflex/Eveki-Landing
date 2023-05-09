@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsTop(window.pageYOffset === 0);
+      setIsTop(window.scrollY === 0);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -19,16 +19,16 @@ const Navbar: React.FC = () => {
 
   return (
     <div
-      className={`fixed top-0 z-10  ${
+      className={`fixed top-0 z-10 max-w-full  ${
         isTop
           ? "bg-transparent"
           : "border-solid bg-primary bg-opacity-80 drop-shadow-2xl backdrop-blur-lg backdrop-filter"
       } 
       ${
         isTop ? " text-black" : "text-white"
-      } mx-md navbar transition-all duration-500 ease-in-out`}
+      } mx-md navbar transition-all duration-500 ease-in-out items-center`}
     >
-      <div className="flex-1 px-1">
+      <div className="flex-1 m-0 px-1 pt-1">
         <div style={{ fontFamily: "Sifonn" }}>
           <Link href="/" className="ml-3 text-3xl">
             Eveki
@@ -38,24 +38,62 @@ const Navbar: React.FC = () => {
 
       <div className="flex-none">
         <nav className="menu menu-horizontal px-1">
-          <div className="hidden lg:flex" >
-          <Link href="/about" className="mr-5 hover:text-gray-900">
-            About
-          </Link>
-          <Link href="/" className="mr-5 hover:text-gray-900">
-            Second Link
-          </Link>
-          <Link href="/" className="mr-5 hover:text-gray-900">
-            Third Link
-          </Link>
-          <Link href="/" className="mr-5 hover:text-gray-900">
-            Fourth Link
-          </Link>
+          <div className="hidden lg:flex">
+            <Link href="/about" className="mr-5 hover:text-gray-900">
+              About
+            </Link>
+            <Link href="/" className="mr-5 hover:text-gray-900">
+              Second Link
+            </Link>
+            <Link href="/" className="mr-5 hover:text-gray-900">
+              Third Link
+            </Link>
+            <Link href="/contact" className="mr-5 hover:text-gray-900">
+              Contact
+            </Link>
           </div>
-          <div className="flex items-center lg:hidden">
-            <button className="mobile-menu-button outline-none ">
-              {isMenuOpen ? <Hix /> : <Hix />}
-            </button>
+          <div className="dropdown dropdown-end mx-2">
+            <label tabIndex={0} className="btn-ghost btn lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </label>
+            <ul
+              tabIndex={0}
+              className="dropdown-content menu glass rounded-box menu-compact mt-3 w-52  p-2 shadow"
+            >
+              <li>
+                <Link href="/about" className="mr-5 hover:text-gray-900">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/" className="mr-5 hover:text-gray-900">
+                  Second Link
+                </Link>
+              </li>
+              <li>
+              <Link href="/" className="mr-5 hover:text-gray-900">
+                Third Link
+              </Link>
+              </li>
+              <li>
+              <Link href="/contact" className="mr-5 hover:text-gray-900">
+                Contact
+              </Link>
+              </li>
+            </ul>
           </div>
         </nav>
       </div>
