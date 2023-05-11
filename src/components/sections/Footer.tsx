@@ -4,11 +4,14 @@ import Link from "next/link";
 const Footer: React.FC = () => {
   return (
     <footer className="footer bg-base-300 p-10 text-base-content">
-    
       <div>
         <span className="footer-title">Company</span>
-        <Link href="/about" className="link-hover link">About us</Link>
-        <Link href="/contact"  className="link-hover link">Contact</Link>
+        <Link href="/about" className="link-hover link">
+          About us
+        </Link>
+        <Link href="/contact" className="link-hover link">
+          Contact
+        </Link>
         <a className="link-hover link">Jobs</a>
         <a className="link-hover link">Press kit</a>
       </div>

@@ -1,22 +1,28 @@
-
 import { FC } from "react";
-import { FaSearch } from "react-icons/fa";
+
+import { RiHomeGearLine } from "react-icons/ri";
+
 import Icon from "@/libs/ReactIcon";
+import { IconType } from "react-icons";
 
 interface Props {
-  icon: string;
+  icon: IconType;
   title: string;
   description: string;
 }
 
 const TopImageCard: FC<Props> = ({ icon, title, description }) => {
+
+
+
+    
   return (
-    <div className="card border-0 shadow-md">
-      <figure className="w-43">
-        <Icon icon={FaSearch} size="96px" color="white" />
+    <div className="border-0 shadow-md justify-center">
+      <figure className="">
+        <Icon icon={icon} size="96px" color="white" />
       </figure>
-      <div className="card-body">
-        <h2 className="card-title">{title}</h2>
+      <div className="">
+        <h2 className="">{title}</h2>
       </div>
     </div>
   );

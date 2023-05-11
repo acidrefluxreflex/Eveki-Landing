@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 type Props = {
   pathData: string[];
-  isRounded: boolean | undefined;
+  isRounded?: boolean;
 };
 
 const SVGAnimation = ({ pathData, isRounded = false }: Props) => {
@@ -22,39 +22,37 @@ const SVGAnimation = ({ pathData, isRounded = false }: Props) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const draw = {
+    hidden: { pathLength: 0, opacity: 0 },
+    visible: (i: number) => {
+      const delay = 1 + i * 0.5;
+      return {
+        pathLength: 1,
+        opacity: 1,
+        transition: {
+          pathLength: { delay, type: "spring", duration: 4.5, bounce: 0 },
+          opacity: { delay, duration: 0.09 }
+        }
+      };
+    }
+  };
+
   return (
-    <div
-      className="example"
-      style={{
-        border: "none",
-        padding: "0",
-        marginLeft: "auto",
-        marginRight: "auto",
-      }}
-    >
-      <motion.svg
-        style={{ width: "100%", height: "100%" }}
-        viewBox="0 0 50 48"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+    <div className="example" style={{ margin: "0 auto", padding: 0, width: "100%", height: "100%", maxWidth: 400 }}>
+      <motion.svg viewBox="0 0 48 48" style={{ width: "100%", height: "100%" }}>
         {isVisible &&
           pathData.map((d, index) => (
             <motion.path
               key={index}
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              stroke="#bf4d00"
-              stroke-linecap={isRounded ? "round" : "none"}
-              stroke-linejoin={isRounded ? "round" : "none"}
-              transition={{
-                duration: 2,
-                ease: "easeInOut",
-              }}
-              strokeWidth={1}
-              strokeDasharray="0 1"
-              fill="#bf4d00"
-              fill-rule="evenodd"
               d={d}
+              fill="#bf4d00"
+              fillRule="evenodd"
+              strokeLinecap={isRounded ? "round" : "butt"}
+              strokeLinejoin={isRounded ? "round" : "miter"}
+              stroke="#bf4d00"
+              strokeWidth={1}
+              variants={draw}
+              custom={index}
             />
           ))}
       </motion.svg>

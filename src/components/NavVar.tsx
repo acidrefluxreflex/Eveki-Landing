@@ -26,9 +26,9 @@ const Navbar: React.FC = () => {
       } 
       ${
         isTop ? " text-black" : "text-white"
-      } mx-md navbar transition-all duration-500 ease-in-out items-center`}
+      } mx-md navbar items-center transition-all duration-500 ease-in-out`}
     >
-      <div className="flex-1 m-0 px-1 pt-1">
+      <div className="m-0 flex-1 px-1 pt-1">
         <div style={{ fontFamily: "Sifonn" }}>
           <Link href="/" className="ml-3 text-3xl">
             Eveki
@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
               Contact
             </Link>
           </div>
-          <div className="dropdown dropdown-end mx-2">
+          <div className="dropdown-end dropdown mx-2">
             <label tabIndex={0} className="btn-ghost btn lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
             </label>
             <ul
               tabIndex={0}
-              className="dropdown-content menu glass rounded-box menu-compact mt-3 w-52  p-2 shadow"
+              className="dropdown-content menu rounded-box glass menu-compact mt-3 w-52  p-2 shadow"
             >
               <li>
                 <Link href="/about" className="mr-5 hover:text-gray-900">
@@ -84,14 +84,14 @@ const Navbar: React.FC = () => {
                 </Link>
               </li>
               <li>
-              <Link href="/" className="mr-5 hover:text-gray-900">
-                Third Link
-              </Link>
+                <Link href="/" className="mr-5 hover:text-gray-900">
+                  Third Link
+                </Link>
               </li>
               <li>
-              <Link href="/contact" className="mr-5 hover:text-gray-900">
-                Contact
-              </Link>
+                <Link href="/contact" className="mr-5 hover:text-gray-900">
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>

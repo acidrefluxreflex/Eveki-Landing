@@ -6,6 +6,8 @@ const TopicSection = () => {
   const controls = useAnimation();
   const { ref, inView } = useInView();
 
+  
+
   useEffect(() => {
     if (inView) {
       controls.start({
@@ -16,7 +18,7 @@ const TopicSection = () => {
   }, [controls, inView]);
 
   return (
-    <div className="h-screen bg-gray-900">
+    <div className="h-screen bg-from-gray-900">
       <motion.div
         className="h-screen w-full bg-green-500"
         ref={ref}

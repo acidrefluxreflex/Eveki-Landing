@@ -43,7 +43,7 @@ const Feature: FC<FeatureProps> = ({
   };
 
   return (
-    <div id="BASE" >
+    <div id="BASE" className="py-9">
       <div className="hidden justify-center py-5 lg:flex">
         <motion.div
           className="items-center justify-center p-0"
