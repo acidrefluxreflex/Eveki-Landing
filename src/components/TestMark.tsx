@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { markdownToHtml } from "@/libs/markdown-to-html";
+import {  markdownToHtml } from "@/libs/markdown-to-html";
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
 type Props = {
   mdPath: string;
@@ -13,7 +14,7 @@ const MarkdownContent = ({ mdPath }: Props) => {
       const response = await fetch(mdPath);
       const text = await response.text();
       console.log(mdPath);
-      const html = await markdownToHtml(text);
+      const html = await  markdownToHtml(text);
       setHtmlContent(html);
     };
     fetchMarkdown();
@@ -24,6 +25,10 @@ const MarkdownContent = ({ mdPath }: Props) => {
       <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
     </div>
   );
+
+  
 };
+
+
 
 export default MarkdownContent;

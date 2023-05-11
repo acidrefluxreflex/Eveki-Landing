@@ -4,6 +4,7 @@ import Hero from "@/components/sections/Hero";
 import FeatureSection from "@/components/sections/FeatureSection";
 
 import HowToUseSection from "@/components/sections/HowtoUse";
+import SupportUseSection from "@/components/sections/SupportSection";
 import ContactForm from "@/components/sections/ContactForm";
 
 export default function Home() {
@@ -14,7 +15,7 @@ export default function Home() {
       <div className="w-full items-center justify-center">
       <HowToUseSection />
         <FeatureSection />
-      
+        <SupportUseSection />
         <ContactForm />
       </div>
     </main>

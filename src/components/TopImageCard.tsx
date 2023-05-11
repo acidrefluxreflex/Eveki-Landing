@@ -12,18 +12,12 @@ interface Props {
 }
 
 const TopImageCard: FC<Props> = ({ icon, title, description }) => {
-
-
-
-    
   return (
-    <div className="border-0 shadow-md justify-center">
-      <figure className="">
-        <Icon icon={icon} size="96px" color="white" />
-      </figure>
-      <div className="">
-        <h2 className="">{title}</h2>
+    <div className="justify-items-center border-0">
+      <div className="box-border">
+      <Icon icon={icon} size="96px" color="white" />
       </div>
+      <h2 className="">{title}</h2>
     </div>
   );
 };

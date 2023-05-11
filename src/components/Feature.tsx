@@ -87,7 +87,7 @@ const Feature: FC<FeatureProps> = ({
           <div className="h-98 relative items-center justify-center ">
             <Image
               src={icon}
-              alt=""
+              alt={title}
               height={size * 0.8}
               width={size * 0.8}
               className="rounded-xl shadow-lg"
