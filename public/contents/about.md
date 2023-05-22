@@ -27,7 +27,7 @@ Evekiは特有の人格形成に特化したAIアプリケーションです。�
 # サービス
 
 ## Evekiの構成
-<Image src="/contents/assets/20230511_171151_Eveki_4).jpg" alt="yoshii の Twitter Icon" width="1280" height="600" />
+<Image src="/contents/assets/Eveki-4.webp" alt="yoshii の Twitter Icon" width="1280" height="600" />
 
 Evekiは人工知能の応答を対応するEveki Coreとそれに対応するフロントシステムという構成で成立しています。Coreに対してAI固有のコードを用いることで任意の人格を呼び出す形になります。CoreにはAPIからアクセスすることができ、例えばEveki iOSではこのCoreと通信することで会話を行なっています。こうすることによって他サービスなど外部との連携をスムーズに行うことが可能にしています。
 
