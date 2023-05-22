@@ -27,9 +27,9 @@ const SVGIcon: FC<IconProps> = ({
     <div style={containerStyle}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="100%"
-        height="100%"
-        viewBox="0 0 18 18"
+        width={`${size}px`}
+        height={`${size}px`}
+        viewBox={`0 0 ${size / 4.2} ${size/ 4.2}`}
         fill={color}
       >
         {pathData.map((path) => (
