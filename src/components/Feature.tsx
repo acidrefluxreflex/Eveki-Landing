@@ -24,13 +24,13 @@ const Feature: FC<FeatureProps> = ({
   const size = 420;
   const splitText = description.split("\n");
 
-  const leftText = "w-2/5 mr-7 pr-10";
+  const leftText = "w-2/5 mr-7 pr-10 ";
   const rightText = "w-2/5 ml-7 pl-10";
 
   const variants = {
     hidden: {
       opacity: 0,
-      x: isLeft ? 100 : -100,
+      x:  100,
     },
     visible: {
       opacity: 1,
@@ -44,9 +44,9 @@ const Feature: FC<FeatureProps> = ({
 
   return (
     <div id="BASE" className="py-9">
-      <div className="hidden justify-center py-5 lg:flex">
+      <div className="hidden justify-center py-5 lg:flex ">
         <motion.div
-          className="items-center justify-center p-0"
+          className="items-center justify-center p-0 max-w-full"
           ref={ref}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}

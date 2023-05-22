@@ -27,7 +27,7 @@ const features = [
 const FeaturesSection: FC = () => {
   return (
     <>
-      <div className="items-center justify-center mt-48">
+      <div className="items-center justify-center my-48">
         <div>
           {features.map((feature) => (
             <Feature
