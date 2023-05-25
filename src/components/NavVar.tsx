@@ -42,8 +42,8 @@ const Navbar: React.FC = () => {
             <Link href="/about" className="mr-5 hover:text-gray-900">
               About
             </Link>
-            <Link href="/" className="mr-5 hover:text-gray-900">
-              Second Link
+            <Link href="/static" className="mr-5 hover:text-gray-900">
+             Blog
             </Link>
             <Link href="/" className="mr-5 hover:text-gray-900">
               Third Link

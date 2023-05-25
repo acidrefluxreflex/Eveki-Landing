@@ -32,7 +32,7 @@ export default async function StaticDetailPage({
     <div className="mx-auto max-w-2xl py-8">
       <h1 className="mb-4 text-3xl font-bold">{post.title}</h1>
       <h2 className="mb-2 text-gray-600">{time}</h2>
-      <div className="prose  text-black">{parse(post.content)}</div>
+      <div className="prose  text-black prose-h2:text-black prose-a:text-blue-500" >{parse(post.content)}</div>
     </div>
   );
 }
