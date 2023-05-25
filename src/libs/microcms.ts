@@ -98,9 +98,12 @@ export const getCategory = async (queries?: MicroCMSQueries) => {
    
     
     
- 
-const { contents } = await getList()
 
+
+  
+const { contents } = await getList()
+console.log('Category ID:', categoryId);
+console.log('Contents:', contents);
 if (!contents || contents.length === 0) {
   return [];
 }
