@@ -59,7 +59,7 @@ contents.map ((post) => {
               ) : null}
 
               <div>
-                <Link href={`/${post.id}`}>
+                <Link href={`/${categoryId}/${post.id}`}>
                   <div className="text-xl font-semibold hover:underline">
                     {post.title}
                   </div>
