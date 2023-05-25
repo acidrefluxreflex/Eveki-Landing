@@ -97,10 +97,19 @@ export const getCategory = async (queries?: MicroCMSQueries) => {
   export const getListForCategory = async (categoryId: string) => {
    
     
+    
  
 const { contents } = await getList()
+
+if (!contents || contents.length === 0) {
+  return [];
+}
 const listData = contents.filter(
   (post) => post.category.id === categoryId
 )
+
+if (!listData || listData.length === 0) {
+  return [];
+}
     return listData;
   };
