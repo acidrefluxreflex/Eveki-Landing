@@ -31,9 +31,11 @@ export default async function StaticPage({
  
   const { contents } = await getList();
   
- 
+contents.map ((post) => {
+  console.log(post.category.id)
+})
 
-  const filtered = ( await contents.filter(
+  const filtered = (await contents.filter(
     (post) => post.category.id === categoryName
   ))
 
