@@ -22,7 +22,9 @@ export default async function StaticDetailPage({
   const post = await getDetail(postId);
 
   // ページの生成された時間を取得
-  const time = new Date().toLocaleString();
+
+  const proseSetting: string =
+    "prose text-black prose-h2:text-black prose-a:text-blue-500 prose-strong:text-blue-500 prose-strong:font-bold";
 
   if (!post) {
     notFound();
@@ -31,8 +33,8 @@ export default async function StaticDetailPage({
   return (
     <div className="mx-auto max-w-2xl py-8">
       <h1 className="mb-4 text-3xl font-bold">{post.title}</h1>
-      <h2 className="mb-2 text-gray-600">{time}</h2>
-      <div className="prose  text-black prose-h2:text-black prose-a:text-blue-500" >{parse(post.content)}</div>
+      <h2 className="mb-2 text-gray-600">{post.createdAt}</h2>
+      <div className={proseSetting}>{parse(post.content)}</div>
     </div>
   );
 }
