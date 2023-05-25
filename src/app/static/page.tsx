@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { getList } from "../../libs/microcms";
+import Image from "next/image";
+import Pagination from "../../components/shared/Pagination";
 
 export default async function StaticPage() {
   const { contents } = await getList();
@@ -18,11 +20,21 @@ export default async function StaticPage() {
         {contents.map((post) => {
           return (
             <li key={post.id} className="text-blue-500 hover:underline">
+              {post.eyecatch ? (
+                <Image
+                  src={post.eyecatch.url}
+                  width={post.eyecatch.width}
+                  height={post.eyecatch.height}
+                  alt={post.title}
+                />
+              ) : (
+                <div className="w-20 h-20 bg-gray-200"></div> // プレースホルダーとして表示する要素
+              )}
               <Link href={`/static/${post.id}`}>{post.title}</Link>
-            
             </li>
           );
         })}
+        <Pagination currentPageNumber={1} maxPageNumber={Math.ceil(contents.length / 4)} />
       </ul>
     </div>
   );
