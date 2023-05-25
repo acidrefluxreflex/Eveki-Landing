@@ -30,8 +30,13 @@ export default async function StaticPage() {
               ) : (
                 <div className="w-20 h-20 bg-gray-200"></div> // プレースホルダーとして表示する要素
               )}
+            <div>
               <Link href={`/blog/${post.id}`}>{post.title}</Link>
-              <Link href={`/blog/${post.id}`}>{post.category.name}</Link>
+           
+              <Link href={`/blog/category/${post.category.id}`}>{post.category.name}</Link>
+              </div>
+              
+
             </li>
           );
         })}

@@ -1,9 +1,9 @@
 
 import Link from "next/link";
-import { getCategory, getList, getDetail } from "../../../../libs/microcms";
+import { getCategory, getList, getCategoryDetail } from "../../../../libs/microcms";
 import Image from "next/image";
 import Pagination from "../../../../components/shared/Pagination";
-import { queries } from "@storybook/testing-library";
+
 
 export async function generateStaticParams() {
   const { contents } = await getCategory();
@@ -18,16 +18,20 @@ export async function generateStaticParams() {
 }
 
 
+
 export default async function StaticPage({
   params: { categoryId },
 }: {
   params: { categoryId: string };
 }) {
 
+  
   const { contents } = await getList();
+
+  const categoryName = (await getCategoryDetail(categoryId)).id;
  
   const filteredContents = contents.filter(
-    (post) => post.category.id === categoryId
+    (post) => post.category.id === categoryName
   );
 
   if (!contents || contents.length === 0) {
@@ -36,7 +40,6 @@ export default async function StaticPage({
 
   return (
     <div className="mx-auto max-w-2xl py-8">
-          <p>{categoryId}</p>
       <ul className="list-disc pl-8">
         {filteredContents.map((post) => {
           return (

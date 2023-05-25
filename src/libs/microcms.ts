@@ -64,8 +64,25 @@ export const getDetail = async (
   return detailData;
 };
 
+export const getCategoryDetail = async (
+    contentId: string,
+    queries?: MicroCMSQueries
+  ) => {
+    const detailData = await client.getListDetail<Category>({
+      endpoint: "categories",
+      contentId,
+      queries,
+    });
+  
+    // データの取得が目視しやすいよう明示的に遅延効果を追加
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+  
+    return detailData;
+  };
+
 
 export const getCategory = async (queries?: MicroCMSQueries) => {
+
     const listData = await client.getList<Category>({
       endpoint: "categories",
       queries,
