@@ -6,16 +6,20 @@ import Pagination from "../../components/shared/Pagination";
 export default async function StaticPage() {
   const { contents } = await getList();
 
+  // ページの生成された時間を取得
+  const time = new Date().toLocaleString();
+
   if (!contents || contents.length === 0) {
-    return <h1 className="mt-8 text-center">No contents</h1>;
+    return <h1 className="text-center mt-8">No contents</h1>;
   }
 
   return (
-    <div className="mx-auto max-w-2xl py-8">
+    <div className="max-w-2xl mx-auto py-8">
+      <h1 className="text-3xl font-bold mb-4">{time}</h1>
       <ul className="list-disc pl-8">
         {contents.map((post) => {
           return (
-            <li key={post.id} className="flex items-center gap-4 py-4">
+            <li key={post.id} className="text-blue-500 hover:underline">
               {post.eyecatch ? (
                 <Image
                   src={post.eyecatch.url}
@@ -23,27 +27,15 @@ export default async function StaticPage() {
                   height={post.eyecatch.height}
                   alt={post.title}
                 />
-              ) : null}
-
-              <div>
-                <Link href={`/blog/${post.id}`}>
-                  <div className="text-xl font-semibold hover:underline">
-                    {post.title}
-                  </div>
-                </Link>
-                <p className="text-gray-500">{post.createdAt}</p>
-                <Link href={`/blog/category/${post.category.id}`}>
-                {post.category.name}
-                </Link>
-              </div>
+              ) : (
+                <div className="w-20 h-20 bg-gray-200"></div> // プレースホルダーとして表示する要素
+              )}
+              <Link href={`/static/${post.id}`}>{post.title}</Link>
             </li>
           );
         })}
+        <Pagination currentPageNumber={1} maxPageNumber={Math.ceil(contents.length / 4)} />
       </ul>
-      <Pagination
-        currentPageNumber={1}
-        maxPageNumber={Math.ceil(contents.length / 4)}
-      />
     </div>
   );
 }
