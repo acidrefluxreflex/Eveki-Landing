@@ -33,7 +33,7 @@ export default async function StaticPage() {
             <div>
               <Link href={`/blog/${post.id}`}>{post.title}</Link>
            
-              <Link href={`/blog/category/${post.category.id}`}>{post.category.name}</Link>
+              <Link href={`/blog/category/${post.category?.id}`}>{post.category?.name}</Link>
               </div>
               
 

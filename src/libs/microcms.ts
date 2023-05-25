@@ -11,7 +11,7 @@ export type Blog = {
   title: string;
   content: string;
   eyecatch?: MicroCMSImage;
-  category: Category;
+  category?: Category;
 } & MicroCMSDate;
 
 export type Category = {
@@ -108,7 +108,7 @@ if (!contents || contents.length === 0) {
   return [];
 }
 const listData = contents.filter(
-  (post) => post.category.id === categoryId
+  (post) => post.category?.id === categoryId
 )
 
 if (!listData || listData.length === 0) {
