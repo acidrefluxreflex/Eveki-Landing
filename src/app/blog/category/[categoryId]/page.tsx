@@ -1,8 +1,8 @@
 
 import Link from "next/link";
-import { getCategory, getList, getDetail } from "../../../libs/microcms";
+import { getCategory, getList, getDetail } from "../../../../libs/microcms";
 import Image from "next/image";
-import Pagination from "../../../components/shared/Pagination";
+import Pagination from "../../../../components/shared/Pagination";
 import { queries } from "@storybook/testing-library";
 
 export async function generateStaticParams() {
