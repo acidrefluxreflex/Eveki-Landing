@@ -1,6 +1,6 @@
 
 import Link from "next/link";
-import { getCategory, getList, getCategoryDetail } from "../../../../libs/microcms";
+import { getCategory, getListForCategory, getCategoryDetail } from "../../../../libs/microcms";
 import Image from "next/image";
 import Pagination from "../../../../components/shared/Pagination";
 
@@ -26,14 +26,11 @@ export default async function StaticPage({
 }) {
 
   
-  const { contents } = await getList();
 
   const categoryName = (await getCategoryDetail(categoryId)).id;
  
-  const filteredContents = contents.filter(
-    (post) => post.category.id === categoryName
-  );
-
+  const contents = await getListForCategory(categoryName);
+  
   if (!contents || contents.length === 0) {
     return <h1 className="mt-8 text-center">No contents</h1>;
   }
@@ -41,7 +38,7 @@ export default async function StaticPage({
   return (
     <div className="mx-auto max-w-2xl py-8">
       <ul className="list-disc pl-8">
-        {filteredContents.map((post) => {
+        {contents.map((post) => {
           return (
             <li key={post.id} className="flex items-center gap-4 py-4">
               {post.eyecatch ? (
