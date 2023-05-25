@@ -2,7 +2,7 @@
 
 ## 概要と特徴
 
-<Image src="/contents/assets/20230511_171133_3_2).jpg" alt="yoshii の Twitter Icon" width="1280" height="600" />
+<Image src="/contents/assets/about1.webp" alt="yoshii の Twitter Icon" width="1280" height="600" />
 
 Evekiは特有の人格形成に特化したAIアプリケーションです。プログラミングなどの専門的な知識を必要とせず、簡単な設定のみで個性豊かな人工知能を作ることが可能です。現在はiOS向けにリリースを行なっています。
 
@@ -10,7 +10,7 @@ Evekiは特有の人格形成に特化したAIアプリケーションです。�
 
 ## キャラクター
 
-<Image src="/contents/assets/1 (1).jpg" alt="yoshii の Twitter Icon" width="1280" height="600" />
+<Image src="/contents/assets/about2.jpg" alt="yoshii の Twitter Icon" width="1280" height="600" />
 
 人工知能の個性を形成する要素のひとつが「キャラクター性」です。これは話し方やメッセージの文体にあたる部分であり、応答や感情の印象を左右するものになっています。
 
