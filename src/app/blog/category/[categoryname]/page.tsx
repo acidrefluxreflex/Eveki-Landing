@@ -13,8 +13,9 @@ export async function generateStaticParams() {
     };
   });
 
-  return [...paths];
+  return paths;
 }
+
 
 export default async function StaticPage({
   params: { categoryId },
@@ -49,7 +50,7 @@ export default async function StaticPage({
               ) : null}
 
               <div>
-                <Link href={`/blog/${post.id}`}>
+                <Link href={`/${post.id}`}>
                   <div className="text-xl font-semibold hover:underline">
                     {post.title}
                   </div>
