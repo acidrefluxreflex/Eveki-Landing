@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
             </label>
             <ul
               tabIndex={0}
-              className="dropdown-content menu rounded-box glass menu-compact mt-3 w-52  p-2 shadow"
+              className="dropdown-content menu rounded-box glass menu-compact mt-3 w-52 p-2 shadow"
             >
               <li>
                 <Link href="/about" className="mr-5 hover:text-gray-900">

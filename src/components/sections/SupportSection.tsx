@@ -20,13 +20,13 @@ const HowToUseSection: React.FC = () => {
     >
       <div className="mx-48 text-center">
         <div className="mx-48 text-center">
-          <h2 className="text-5xl font-bold ">カタン作成</h2>
-          <p>momo</p>
+          <h2 className="text-5xl font-bold ">個性豊かな会話AIを気軽に作成</h2>
+          <p>AIの趣味や話し方を自由に設定し、理想の友人やパートナーを作ることができます。</p>
         </div>
         <Image
-          src="/images/crownIcon.jpg"
-          height={1280 * 2}
-          width={680 * 2}
+          src="/images/chatImage.png"
+          height={1366}
+          width={ 768 }
           alt=""
         />
       </div>
