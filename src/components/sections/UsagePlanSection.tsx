@@ -1,9 +1,9 @@
 import React from "react";
 import Card from "../shared/VStackTexts";
 
-const DetailFeatureSection: React.FC = () => {
+const UsagePlaneSection: React.FC = () => {
   return (
-    <div className="my-8 flex justify-center">
+    <div className="flex justify-center bg-[#dcccde25] py-8">
       <Card
         imageSrc="/path/to/image.jpg"
         title="キャラクター"
@@ -29,4 +29,4 @@ const DetailFeatureSection: React.FC = () => {
   );
 };
 
-export default DetailFeatureSection;
+export default UsagePlaneSection;
