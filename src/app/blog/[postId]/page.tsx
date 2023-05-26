@@ -2,7 +2,14 @@ import { notFound } from "next/navigation";
 import parse from "html-react-parser";
 import { getDetail, getList } from "../../../libs/microcms";
 
+import dayjs from "dayjs";
+// プラグインが必要
+import ja from "dayjs/locale/ja";
+dayjs.locale(ja);
+
 export async function generateStaticParams() {
+
+  
   const { contents } = await getList();
 
   const paths = contents.map((post) => {
@@ -21,6 +28,8 @@ export default async function StaticDetailPage({
 }) {
   const post = await getDetail(postId);
 
+  const createdAt = dayjs(post.createdAt).format("YYYY年MM月DD日");
+
   // ページの生成された時間を取得
 
   const proseSetting: string =
@@ -33,7 +42,7 @@ export default async function StaticDetailPage({
   return (
     <div className="mx-auto max-w-2xl py-8">
       <h1 className="mb-4 text-3xl font-bold">{post.title}</h1>
-      <h2 className="mb-2 text-gray-600">{post.createdAt}</h2>
+      <h2 className="mb-2 text-gray-600">{createdAt}</h2>
       <div className={proseSetting}>{parse(post.content)}</div>
     </div>
   );

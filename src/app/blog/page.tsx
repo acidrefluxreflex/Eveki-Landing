@@ -3,6 +3,7 @@ import { getList } from "../../libs/microcms";
 import Image from "next/image";
 import Pagination from "../../components/shared/Pagination";
 import BlogPost from "@/components/shared/BlogCard";
+import BlogCategorySection from "@/components/sections/BlogCategorySection";
 export default async function StaticPage() {
   const { contents } = await getList();
 
@@ -23,6 +24,7 @@ export default async function StaticPage() {
             </div>
           );
         })}
+   <BlogCategorySection />
         <Pagination
           currentPageNumber={1}
           maxPageNumber={Math.ceil(contents.length / 4)}
