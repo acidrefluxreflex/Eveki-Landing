@@ -59,9 +59,9 @@ const Feature: FC<FeatureProps> = ({
           }}
         >
           <div className={isLeft ? rightText : leftText}>
-            <h2 className="text-4xl font-bold">{title}</h2>
+            <h2 className="text-6xl font-bold mb-9">{title}</h2>
             {splitText.map((line, index) => (
-              <p key={index} className="mt-4">
+              <p key={index} className="text-lg mt-4">
                 {line}
                 {index !== splitText.length - 1 && <br />}
               </p>

@@ -1,9 +1,12 @@
-
 import Link from "next/link";
-import { getCategory, getListForCategory, getCategoryDetail, getList } from "../../../../libs/microcms";
+import {
+  getCategory,
+  getListForCategory,
+  getCategoryDetail,
+  getList,
+} from "../../../../libs/microcms";
 import Image from "next/image";
 import Pagination from "../../../../components/shared/Pagination";
-
 
 export async function generateStaticParams() {
   const { contents } = await getCategory();
@@ -17,27 +20,22 @@ export async function generateStaticParams() {
   return paths;
 }
 
-
-
 export default async function StaticPage({
   params: { categoryId },
 }: {
   params: { categoryId: string };
 }) {
-
-  
-
   const categoryName = (await getCategoryDetail(categoryId)).id;
- 
-  const { contents } = await getList();
-  
-contents.map ((post) => {
-  console.log(post.category?.id)
-})
 
-  const filtered = (await contents.filter(
+  const { contents } = await getList();
+
+  contents.map((post) => {
+    console.log(post.category?.id);
+  });
+
+  const filtered = await contents.filter(
     (post) => post.category?.id === categoryName
-  ))
+  );
 
   if (!filtered || filtered.length === 0) {
     return <h1 className="mt-8 text-center">No contents</h1>;
@@ -59,7 +57,7 @@ contents.map ((post) => {
               ) : null}
 
               <div>
-                <Link href={`/${categoryId}/${post.id}`}>
+                <Link href={`/blog/${post.id}`}>
                   <div className="text-xl font-semibold hover:underline">
                     {post.title}
                   </div>

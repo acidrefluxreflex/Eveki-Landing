@@ -13,9 +13,10 @@ export default function Home() {
       <Hero />
 
       <div className="w-full items-center justify-center">
-      <HowToUseSection />
+      <SupportUseSection />
+     
         <FeatureSection />
-        <SupportUseSection />
+        <HowToUseSection />
         <ContactForm />
       </div>
     </main>
