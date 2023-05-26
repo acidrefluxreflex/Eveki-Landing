@@ -35,7 +35,7 @@ const BlogPost: React.FC<{ post: Blog }> = ({ post }) => {
           <div className="mb-4 text-gray-600">
             {post.category ? (
               <Link
-                href={`/category/${post.category.id}`}
+                href={`/blog/category/${post.category.id}`}
                 className="mr-2 text-sm text-gray-500"
               >
                 {post.category.name}
