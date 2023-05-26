@@ -22,7 +22,7 @@ const Card: React.FC<CardProps> = ({
   const size = 260;
 
   return (
-    <div className="flex max-w-xs flex-col items-center px-7">
+    <div className="mx-7 flex max-w-xs flex-col items-center px-7">
       <Image src={imageSrc} width={size} height={size} alt={title} />
       <h3 className="pb-7 text-3xl font-bold">{title}</h3>
       <p className="pb-7">{description}</p>

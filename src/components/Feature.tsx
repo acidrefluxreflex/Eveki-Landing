@@ -81,10 +81,15 @@ const Feature: FC<FeatureProps> = ({
       <div className="items-center justify-center py-5 lg:hidden">
         <div className="min-h-screen p-4">
           <div className="m-7 p-6">
-            <h2 className="text-3xl font-medium">{title}</h2>
-            <p className="">{description}</p>
+            <h2 className="text-3xl font-medium mb-9">{title}</h2>
+            {splitText.map((line, index) => (
+              <p key={index} className="text-lg mt-4">
+                {line}
+                {index !== splitText.length - 1 && <br />}
+              </p>
+            ))}
           </div>
-          <div className="h-98 relative items-center justify-center ">
+          <div className="h-98  items-center justify-center px-5 ">
             <Image
               src={icon}
               alt={title}

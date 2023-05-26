@@ -9,30 +9,29 @@ const Hero: React.FC = () => {
   const size = 550;
 
   return (
-    <div className="flex h-screen justify-center ">
-      <div className="animate-fade-in items-center sm:block lg:flex ">
+    <div className="sm:mt-20" 
+  
+   
+>
+    <div className="flex lg:min-h-screen flex-col justify-center sm:items-center">
+      <div className="animate-fade-in items-center sm:block lg:flex">
         <div
           id="Text Section"
-          className="block w-3/4 justify-start px-5 text-left"
+          className="block w-3/4 justify-start px-5 text-left "
         >
           <div className="container" style={{ fontFamily: "Sifonn" }}>
             <p className="p-2">AIキャラクター制作アプリ</p>
             <h1 className="text-9xl font-bold text-black ">Eveki</h1>
           </div>
-          <div className="mb-8  px-2 text-lg font-medium text-black">
+          <div className="mb-8 px-2 text-lg font-medium text-black">
             <p>誰でも自分だけのAIを気軽に</p>
             <p>カスタマイズする世界へ</p>
             <button className="btn my-5">ダウンロード</button>
           </div>
         </div>
-        <Image
-          src="/images/top.png"
-          alt=""
-          height={size}
-          width={size}
-          //className="rounded-xl shadow-lg"
-        />
+        <Image src="/images/top.png" alt="" height={size} width={size} />
       </div>
+    </div>
     </div>
   );
 };

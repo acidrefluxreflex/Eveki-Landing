@@ -3,7 +3,7 @@ import Card from "../shared/VStackTexts";
 
 const UsagePlaneSection: React.FC = () => {
   return (
-    <div className="flex justify-center bg-[#dcccde25] py-8">
+    <div className="flex  flex-col md:flex-row justify-center  py-8">
       <Card
         imageSrc="/images/bubbleIcon.png"
         title="日々の話し相手に"

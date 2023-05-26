@@ -1,6 +1,6 @@
 "use client";
 
-import Hero from "@/components/sections/Hero";
+import Hero from "@/components/sections/NewHero";
 import FeatureSection from "@/components/sections/FeatureSection";
 
 import HowToUseSection from "@/components/sections/HowtoUse";

@@ -12,9 +12,9 @@ const HowToUseSection: React.FC = () => {
   });
 
   return (
-    <section className="flex justify-center items-center bg-[#dcccde25] pt-20">
+    <section className="flex justify-center items-center bg-[#dcccde25] lg:pt-20">
       <div className="text-center">
-        <div className="mx-48 text-center">
+        <div className=" text-center">
           <h2 className="text-5xl font-bold">個性豊かな会話AIを気軽に作成</h2>
           <p className="my-8">
             AIの趣味や話し方を自由に設定し、理想の友人やパートナーを作ることができます。

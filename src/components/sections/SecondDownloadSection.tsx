@@ -13,7 +13,7 @@ const SecondDownloadSection: React.FC = () => {
       <div className="animate-fade-in items-center sm:block lg:flex ">
         <div
           id="Text Section"
-          className="block w-3/4 justify-start px-5 text-left"
+          className="block justify-start px-5 text-left"
         >
           <div className="container" style={{ fontFamily: "Sifonn" }}>
             <p className="p-2">AIキャラクター制作アプリ</p>

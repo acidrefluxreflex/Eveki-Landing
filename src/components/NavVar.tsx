@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
               Blog
             </Link>
             <Link href="/" className="mr-5 hover:text-gray-900">
-              Third Link
+              Document
             </Link>
             <Link href="/contact" className="mr-5 hover:text-gray-900">
               Contact

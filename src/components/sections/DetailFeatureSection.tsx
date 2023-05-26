@@ -3,7 +3,7 @@ import Card from "../shared/VStackTexts";
 
 const DetailFeatureSection: React.FC = () => {
   return (
-    <div className="my-8 flex justify-center">
+    <div className="my-24 flex flex-col md:flex-row justify-center">
       <Card
         imageSrc="/images/Imaginary-friend-amico.svg"
         title="キャラクター"
