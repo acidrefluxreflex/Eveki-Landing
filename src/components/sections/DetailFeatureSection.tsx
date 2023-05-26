@@ -7,7 +7,7 @@ const DetailFeatureSection: React.FC = () => {
       <Card
         imageSrc="/path/to/image.jpg"
         title="キャラクター"
-        description="お嬢様言葉や関西弁など、AIの話し方として選べるキャラクターを豊富に用意しています。"
+        description="お嬢様言葉や関西弁など、話し方として様々なキャラを選択できます。"
         buttonText="ボタン"
         link="/"
       />

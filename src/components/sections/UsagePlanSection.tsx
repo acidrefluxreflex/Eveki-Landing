@@ -5,25 +5,28 @@ const UsagePlaneSection: React.FC = () => {
   return (
     <div className="flex justify-center bg-[#dcccde25] py-8">
       <Card
-        imageSrc="/path/to/image.jpg"
-        title="キャラクター"
-        description="お嬢様言葉や関西弁など、AIの話し方として選べるキャラクターを豊富に用意しています。"
+        imageSrc="/images/bubbleIcon.png"
+        title="日々の話し相手に"
+        description="EvekiのAIならいつでもあなたの話を聞いてくれます"
         buttonText="ボタン"
         link="/"
+        showButton={false}
       />
       <Card
-        imageSrc="/path/to/image.jpg"
-        title="グループチャット"
-        description="複数のAIを交えて会話することのできるグループチャットが可能です。"
+        imageSrc="/images/heartIcon.png"
+        title="悩みの相談相手に"
+        description="他人に打ち明けにくいこともこっそり話すことができます"
         buttonText="ボタン"
         link="/"
+        showButton={false}
       />
       <Card
-        imageSrc="/path/to/top.jpg"
-        title="記憶の保持"
-        description="会話した内容をAIに記憶させて、その前提で会話を再開できます。"
+        imageSrc="/images/academicIcon.png"
+        title="創作・勉強の助けに"
+        description="基礎的な知識を持っているので目的に応じた使い方が可能です"
         buttonText="ボタン"
         link="/"
+        showButton={false}
       />
     </div>
   );

@@ -2,13 +2,13 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-
 interface CardProps {
   imageSrc: string;
   title: string;
   description: string;
   buttonText: string;
-  link: string
+  link: string;
+  showButton?: boolean;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -16,24 +16,26 @@ const Card: React.FC<CardProps> = ({
   title,
   description,
   buttonText,
-  link
-
+  link,
+  showButton = true, // ボタンの初期値をtrueに設定
 }) => {
-
- const size = 260;
-
+  const size = 260;
 
   return (
-    <div className="flex flex-col items-center max-w-xs px-7">
-      <Image src={imageSrc}  width={size} height={size} alt={title} />
-      <h3 className="text-3xl font-bold pb-7">{title}</h3>
+    <div className="flex max-w-xs flex-col items-center px-7">
+      <Image src={imageSrc} width={size} height={size} alt={title} />
+      <h3 className="pb-7 text-3xl font-bold">{title}</h3>
       <p className="pb-7">{description}</p>
-     <Link href={link} className="btn btn-outline btn-primary text-xl min-w-xs">{buttonText}</Link>
+      {showButton && ( // showButtonがtrueの場合にのみボタンを表示
+        <Link
+          href={link}
+          className="min-w-xs btn-outline btn-primary btn text-xl"
+        >
+          {buttonText}
+        </Link>
+      )}
     </div>
   );
-
-
-
 };
 
 export default Card;

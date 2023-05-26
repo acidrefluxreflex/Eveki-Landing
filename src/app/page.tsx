@@ -16,9 +16,9 @@ export default function Home() {
       <Hero />
       <div className="w-full items-center justify-center">
         <SupportUseSection />
+        <UsagePlaneSection />
         <FeatureSection />
         <DetailFeatureSection />
-        <HowToUseSection />
         <SecondDownloadSection />
         <ContactForm />
       </div>
