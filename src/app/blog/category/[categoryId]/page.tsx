@@ -1,12 +1,12 @@
-import Link from "next/link";
+
 import {
   getCategory,
   getListForCategory,
   getCategoryDetail,
   getList,
 } from "../../../../libs/microcms";
-import Image from "next/image";
 import Pagination from "../../../../components/shared/Pagination";
+import BlogPost from "@/components/shared/BlogCard";
 
 export async function generateStaticParams() {
   const { contents } = await getCategory();
@@ -46,26 +46,9 @@ export default async function StaticPage({
       <ul className="list-disc pl-8">
         {filtered.map((post) => {
           return (
-            <li key={post.id} className="flex items-center gap-4 py-4">
-              {post.eyecatch ? (
-                <Image
-                  src={post.eyecatch.url}
-                  width={post.eyecatch.width}
-                  height={post.eyecatch.height}
-                  alt={post.title}
-                />
-              ) : null}
-
-              <div>
-                <Link href={`/blog/${post.id}`}>
-                  <div className="text-xl font-semibold hover:underline">
-                    {post.title}
-                  </div>
-                </Link>
-                <p className="text-gray-500">{post.createdAt}</p>
-                {post.category?.name}
-              </div>
-            </li>
+            <div key={post.id} className="">
+            <BlogPost post={post} />
+            </div>
           );
         })}
       </ul>
