@@ -6,6 +6,7 @@ import FeatureSection from "@/components/sections/FeatureSection";
 import HowToUseSection from "@/components/sections/HowtoUse";
 import SupportUseSection from "@/components/sections/SupportSection";
 import ContactForm from "@/components/sections/ContactForm";
+import DetailFeatureSection from "@/components/sections/DetailFeatureSection";
 
 export default function Home() {
   return (
@@ -15,8 +16,10 @@ export default function Home() {
       <div className="w-full items-center justify-center">
       <SupportUseSection />
      
-        <FeatureSection />
+        <FeatureSection /> 
+        <DetailFeatureSection />
         <HowToUseSection />
+
         <ContactForm />
       </div>
     </main>

@@ -33,7 +33,7 @@ const features = [
 const FeaturesSection: FC = () => {
   return (
     <>
-      <div className="items-center justify-center my-48">
+      <div className="items-center justify-center  bg-[#dcccde25]">
         <div>
           {features.map((feature) => (
             <Feature
