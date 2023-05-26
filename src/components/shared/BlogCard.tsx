@@ -3,7 +3,17 @@ import Link from "next/link";
 import Image from "next/image";
 import { Blog } from "@/libs/microcms";
 
+import dayjs from 'dayjs';
+// プラグインが必要
+import ja from 'dayjs/locale/ja';
+dayjs.locale(ja);
+
+
 const BlogPost: React.FC<{ post: Blog }> = ({ post }) => {
+
+  const createdAt = dayjs(post.createdAt).format("YYYY年MM月DD日")
+
+
   return (
     <div className="flex flex-col overflow-hidden  bg-white  sm:flex-row">
       {post.eyecatch ? (
@@ -19,7 +29,9 @@ const BlogPost: React.FC<{ post: Blog }> = ({ post }) => {
 
       <div className="flex flex-col justify-between p-6 sm:w-2/3">
         <div>
-          <h2 className="mb-2 text-2xl font-bold">{post.title}</h2>
+          <Link href={`/blog/${post.id}`} className="mb-2 text-xl font-bold">
+            {post.title}
+          </Link>
           <div className="mb-4 text-gray-600">
             {post.category ? (
               <Link
@@ -31,7 +43,9 @@ const BlogPost: React.FC<{ post: Blog }> = ({ post }) => {
             ) : (
               <div></div>
             )}
-            <p className="text-sm text-gray-500">{post.createdAt}</p>
+            <p className="text-sm text-gray-500">{
+            createdAt
+            }</p>
           </div>
         </div>
       </div>
