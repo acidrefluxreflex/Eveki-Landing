@@ -32,7 +32,7 @@ export default async function StaticDetailPage({
   // ページの生成された時間を取得
 
   const proseSetting: string =
-    "prose text-black prose-h2:text-black prose-a:text-blue-500 prose-strong:text-blue-500 prose-strong:font-bold";
+    "prose  text-black prose-h2:text-black prose-a:text-blue-500 prose-strong:text-blue-500 prose-strong:font-bold prose-h2:border-b-2  prose-h2:text-3xl";
 
   if (!post) {
     notFound();
@@ -45,17 +45,23 @@ export default async function StaticDetailPage({
         <li><Link href="/blog">ブログ</Link></li>
         <li><Link
             href="/blog/category/[categoryId]"
-            as={`/blog/category/${post.category?.name ?? ""}`}
+            as={`/blog/category/${post.category?.id ?? ""}`}
           >
             {post.category?.name ?? ""}
           </Link></li>
          <li className="inline-block">{post.title}</li>
         </ul>
       </div>
+      <h2 className="mb-2 text-gray-600">{createdAt}</h2>
       <h1 className="mb-4 text-5xl font-bold">{post.title}</h1>
 
-      <p className="mb-2 text-gray-600">{post.category?.name ?? ""}</p>
-      <h2 className="mb-2 text-gray-600">{createdAt}</h2>
+      <p className="badge mb-12"><Link
+            href="/blog/category/[categoryId]"
+            as={`/blog/category/${post.category?.id ?? ""}`}
+          >
+            {post.category?.name ?? ""}
+          </Link></p>
+
       <div className={proseSetting}>{parse(post.content)}</div>
     </div>
   );

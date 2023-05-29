@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <main className="min-h-screen pt-8 md:gap-8  flex flex-col md:flex-row  justify-center">
+    <main className="min-h-screen pt-8 px-2 md:gap-16  flex flex-col md:flex-row  justify-center">
       
       {children}
       <SideElement />
