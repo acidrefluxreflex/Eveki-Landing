@@ -39,30 +39,38 @@ export default async function StaticDetailPage({
   }
 
   return (
-    <div className="max-w-2xl py-8">
-      <div className="breadcrumbs text-sm">
-        <ul>
-        <li><Link href="/blog">ブログ</Link></li>
-        <li><Link
+    <div>
+      <div className="max-w-2xl py-8">
+        <div className="breadcrumbs text-sm">
+          <ul>
+            <li>
+              <Link href="/blog">ブログ</Link>
+            </li>
+            <li>
+              <Link
+                href="/blog/category/[categoryId]"
+                as={`/blog/category/${post.category?.id ?? ""}`}
+              >
+                {post.category?.name ?? ""}
+              </Link>
+            </li>
+            <li className="inline-block">{post.title}</li>
+          </ul>
+        </div>
+        <h2 className="mb-2 text-gray-600">{createdAt}</h2>
+        <h1 className="mb-4 text-5xl font-bold">{post.title}</h1>
+
+        <p className="badge mb-12">
+          <Link
             href="/blog/category/[categoryId]"
             as={`/blog/category/${post.category?.id ?? ""}`}
           >
             {post.category?.name ?? ""}
-          </Link></li>
-         <li className="inline-block">{post.title}</li>
-        </ul>
+          </Link>
+        </p>
+
+        <div className={proseSetting}>{parse(post.content)}</div>
       </div>
-      <h2 className="mb-2 text-gray-600">{createdAt}</h2>
-      <h1 className="mb-4 text-5xl font-bold">{post.title}</h1>
-
-      <p className="badge mb-12"><Link
-            href="/blog/category/[categoryId]"
-            as={`/blog/category/${post.category?.id ?? ""}`}
-          >
-            {post.category?.name ?? ""}
-          </Link></p>
-
-      <div className={proseSetting}>{parse(post.content)}</div>
     </div>
   );
 }
