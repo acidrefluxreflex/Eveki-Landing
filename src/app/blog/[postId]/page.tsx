@@ -1,11 +1,11 @@
 import { notFound } from "next/navigation";
 import parse from "html-react-parser";
 import { getDetail, getList } from "../../../libs/microcms";
-
+import Link from "next/link";
 import dayjs from "dayjs";
 // プラグインが必要
 import ja from "dayjs/locale/ja";
-import { pid } from "process";
+
 dayjs.locale(ja);
 
 export async function generateStaticParams() {
@@ -39,9 +39,21 @@ export default async function StaticDetailPage({
   }
 
   return (
-    <div className="mx-auto max-w-2xl py-8">
-     
-      <h1 className="mb-4 text-3xl font-bold">{post.title}</h1>
+    <div className="max-w-2xl py-8">
+      <div className="breadcrumbs text-sm">
+        <ul>
+        <li><Link href="/blog">ブログ</Link></li>
+        <li><Link
+            href="/blog/category/[categoryId]"
+            as={`/blog/category/${post.category?.name ?? ""}`}
+          >
+            {post.category?.name ?? ""}
+          </Link></li>
+         <li className="inline-block">{post.title}</li>
+        </ul>
+      </div>
+      <h1 className="mb-4 text-5xl font-bold">{post.title}</h1>
+
       <p className="mb-2 text-gray-600">{post.category?.name ?? ""}</p>
       <h2 className="mb-2 text-gray-600">{createdAt}</h2>
       <div className={proseSetting}>{parse(post.content)}</div>
