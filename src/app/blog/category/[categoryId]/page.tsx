@@ -42,7 +42,7 @@ export default async function StaticPage({
   }
 
   return (
-    <div className="mx-auto max-w-2xl py-8">
+    <div className="max-w-2xl ">
       <ul className="list-disc pl-8">
         {filtered.map((post) => {
           return (

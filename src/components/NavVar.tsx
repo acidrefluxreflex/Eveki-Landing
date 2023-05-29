@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
       </div>
 
       <div className="flex-none">
-        <nav className="menu menu-horizontal px-1 ">
+        <nav className="menu menu-horizontal px-1 font-medium">
           <div className="hidden lg:flex">
             <Link href="/about" className="mr-5 hover:text-gray-900">
               About
@@ -79,19 +79,19 @@ const Navbar: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/" className="mr-5 hover:text-gray-900">
-                  Second Link
-                </Link>
+              <Link href="/blog" className="mr-5 hover:text-gray-900">
+              Blog
+            </Link>
               </li>
               <li>
-                <Link href="/" className="mr-5 hover:text-gray-900">
-                  Third Link
-                </Link>
+              <Link href="/" className="mr-5 hover:text-gray-900">
+              Document
+            </Link>
               </li>
               <li>
-                <Link href="/contact" className="mr-5 hover:text-gray-900">
-                  Contact
-                </Link>
+              <Link href="/contact" className="mr-5 hover:text-gray-900">
+              Contact
+            </Link>
               </li>
             </ul>
           </div>

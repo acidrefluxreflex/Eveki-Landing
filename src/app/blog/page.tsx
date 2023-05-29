@@ -8,15 +8,15 @@ export default async function StaticPage() {
   const { contents } = await getList();
 
   // ページの生成された時間を取得
-  const time = new Date().toLocaleString();
+
 
   if (!contents || contents.length === 0) {
     return <h1 className="mt-8 text-center">No contents</h1>;
   }
 
   return (
-    <div className="mx-auto max-w-2xl py-8">
-      <div className=" pl-8">
+    <div className="max-w-2xl">
+      <div className="max-w-2xl pl-8">
         {contents.map((post) => {
           return (
             <div key={post.id} className="">
