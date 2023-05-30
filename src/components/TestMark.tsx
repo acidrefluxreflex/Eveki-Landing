@@ -17,7 +17,7 @@ const MarkdownContent = ({ mdPath }: Props) => {
     const fetchMarkdown = async () => {
       const response = await fetch(mdPath);
       const text = await response.text();
-      console.log(mdPath);
+
       const html = await  markdownToHtml(text);
       setHtmlContent(html);
     };
@@ -25,7 +25,7 @@ const MarkdownContent = ({ mdPath }: Props) => {
   }, []);
 
   return (
-    <div id="content" className="prose lg:w-2/5 ">
+    <div id="content" className="prose px-4  lg:w-2/5 ">
       <div className={proseSetting} dangerouslySetInnerHTML={{ __html: htmlContent }} />
     </div>
   );

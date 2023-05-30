@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://eveki.net/api/hello</loc><lastmod>2023-05-29T09:20:56.724Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://eveki.net/contact</loc><lastmod>2023-05-29T09:20:56.724Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://eveki.net/blog</loc><lastmod>2023-05-29T09:20:56.724Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://eveki.net/about/privacy</loc><lastmod>2023-05-29T09:20:56.724Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://eveki.net</loc><lastmod>2023-05-29T09:20:56.724Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://eveki.net/about</loc><lastmod>2023-05-29T09:20:56.724Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://eveki.net/favicon.ico</loc><lastmod>2023-05-29T09:20:56.724Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://eveki.net/blog/category/joz2f1k4o8</loc><lastmod>2023-05-29T09:20:56.724Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://eveki.net/blog/category/2fc__sfje</loc><lastmod>2023-05-29T09:20:56.724Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://eveki.net/blog/category/jyyi8qdys</loc><lastmod>2023-05-29T09:20:56.724Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://eveki.net/blog/o1am8j6pzr</loc><lastmod>2023-05-29T09:20:56.724Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://eveki.net/blog/0o9asprcxhx</loc><lastmod>2023-05-29T09:20:56.724Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://eveki.net/blog/y5_ok5nwua</loc><lastmod>2023-05-29T09:20:56.724Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://eveki.net/about/privacy</loc><lastmod>2023-05-30T05:37:36.284Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://eveki.net/api/hello</loc><lastmod>2023-05-30T05:37:36.284Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://eveki.net/favicon.ico</loc><lastmod>2023-05-30T05:37:36.284Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://eveki.net/contact</loc><lastmod>2023-05-30T05:37:36.284Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://eveki.net/about</loc><lastmod>2023-05-30T05:37:36.284Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://eveki.net</loc><lastmod>2023-05-30T05:37:36.284Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://eveki.net/blog</loc><lastmod>2023-05-30T05:37:36.284Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://eveki.net/product</loc><lastmod>2023-05-30T05:37:36.284Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://eveki.net/blog/category/joz2f1k4o8</loc><lastmod>2023-05-30T05:37:36.284Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://eveki.net/blog/category/2fc__sfje</loc><lastmod>2023-05-30T05:37:36.284Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://eveki.net/blog/category/jyyi8qdys</loc><lastmod>2023-05-30T05:37:36.284Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://eveki.net/blog/o1am8j6pzr</loc><lastmod>2023-05-30T05:37:36.284Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://eveki.net/blog/0o9asprcxhx</loc><lastmod>2023-05-30T05:37:36.284Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://eveki.net/blog/y5_ok5nwua</loc><lastmod>2023-05-30T05:37:36.284Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

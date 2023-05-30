@@ -46,7 +46,6 @@ export const getList = async (queries?: MicroCMSQueries) => {
   return listData;
 };
 
-
 // ブログの詳細を取得
 export const getDetail = async (
   contentId: string,
@@ -65,54 +64,43 @@ export const getDetail = async (
 };
 
 export const getCategoryDetail = async (
-    contentId: string,
-    queries?: MicroCMSQueries
-  ) => {
-    const detailData = await client.getListDetail<Category>({
-      endpoint: "categories",
-      contentId,
-      queries,
-    });
-  
-    // データの取得が目視しやすいよう明示的に遅延効果を追加
-    await new Promise((resolve) => setTimeout(resolve, 3000));
-  
-    return detailData;
-  };
+  contentId: string,
+  queries?: MicroCMSQueries
+) => {
+  const detailData = await client.getListDetail<Category>({
+    endpoint: "categories",
+    contentId,
+    queries,
+  });
 
+  // データの取得が目視しやすいよう明示的に遅延効果を追加
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+
+  return detailData;
+};
 
 export const getCategory = async (queries?: MicroCMSQueries) => {
+  const listData = await client.getList<Category>({
+    endpoint: "categories",
+    queries,
+  });
 
-    const listData = await client.getList<Category>({
-      endpoint: "categories",
-      queries,
-    });
-  
-    // データの取得が目視しやすいよう明示的に遅延効果を追加
-    await new Promise((resolve) => setTimeout(resolve, 3000));
-  
-    return listData;
-  };
+  // データの取得が目視しやすいよう明示的に遅延効果を追加
+  await new Promise((resolve) => setTimeout(resolve, 3000));
 
-  export const getListForCategory = async (categoryId: string) => {
-   
-    
-    
+  return listData;
+};
 
+export const getListForCategory = async (categoryId: string) => {
+  const { contents } = await getList();
 
-  
-const { contents } = await getList()
-console.log('Category ID:', categoryId);
-console.log('Contents:', contents);
-if (!contents || contents.length === 0) {
-  return [];
-}
-const listData = contents.filter(
-  (post) => post.category?.id === categoryId
-)
+  if (!contents || contents.length === 0) {
+    return [];
+  }
+  const listData = contents.filter((post) => post.category?.id === categoryId);
 
-if (!listData || listData.length === 0) {
-  return [];
-}
-    return listData;
-  };
+  if (!listData || listData.length === 0) {
+    return [];
+  }
+  return listData;
+};
