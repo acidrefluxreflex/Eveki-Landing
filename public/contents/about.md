@@ -2,7 +2,7 @@
 
 ## 概要と特徴
 
-<Image src="/contents/assets/about1.webp" alt="yoshii の Twitter Icon" width="1280" height="600" />
+<Image src="/contents/assets/about1.webp" alt="Eveki product" width="1280" height="600" />
 
 Evekiは特有の人格形成に特化したAIアプリケーションです。プログラミングなどの専門的な知識を必要とせず、簡単な設定のみで個性豊かな人工知能を作ることが可能です。現在はiOS向けにリリースを行なっています。
 
@@ -10,7 +10,7 @@ Evekiは特有の人格形成に特化したAIアプリケーションです。�
 
 ## キャラクター
 
-<Image src="/contents/assets/about2.jpg" alt="yoshii の Twitter Icon" width="1280" height="600" />
+<Image src="/contents/assets/product5.jpg" alt="Eveki product" width="1280" height="600" />
 
 人工知能の個性を形成する要素のひとつが「キャラクター性」です。これは話し方やメッセージの文体にあたる部分であり、応答や感情の印象を左右するものになっています。
 
@@ -18,7 +18,7 @@ Evekiは特有の人格形成に特化したAIアプリケーションです。�
 
 ## AIシェアシステム
 
-<Image src="/contents/assets/2 (2).jpg" alt="yoshii の Twitter Icon" width="1280" height="600" />
+<Image src="/contents/assets/2 (2).jpg" alt="Eveki product" width="1280" height="600" />
 
 作成したAIは公開、共有することが可能です。従来のようにデータサイズの大きいモデルを扱う必要はなく、個性を抽出したコードを用いることで簡単にシェアすることが可能です。コードはQRコードやそれを掲載したAIカードによって共有することができます。
 
@@ -27,7 +27,7 @@ Evekiは特有の人格形成に特化したAIアプリケーションです。�
 # サービス
 
 ## Evekiの構成
-<Image src="/contents/assets/Eveki-4.webp" alt="yoshii の Twitter Icon" width="1280" height="600" />
+<Image src="/contents/assets/Eveki-4.webp" alt="Eveki product" width="1280" height="600" />
 
 Evekiは人工知能の応答を対応するEveki Coreとそれに対応するフロントシステムという構成で成立しています。Coreに対してAI固有のコードを用いることで任意の人格を呼び出す形になります。CoreにはAPIからアクセスすることができ、例えばEveki iOSではこのCoreと通信することで会話を行なっています。こうすることによって他サービスなど外部との連携をスムーズに行うことが可能にしています。
 

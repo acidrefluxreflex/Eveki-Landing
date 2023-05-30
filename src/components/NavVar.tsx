@@ -42,12 +42,13 @@ const Navbar: React.FC = () => {
             <Link href="/about" className="mr-5 hover:text-gray-900">
               About
             </Link>
+            <Link href="/product" className="mr-5 hover:text-gray-900">
+              Product
+            </Link>
             <Link href="/blog" className="mr-5 hover:text-gray-900">
               Blog
             </Link>
-            <Link href="/" className="mr-5 hover:text-gray-900">
-              Document
-            </Link>
+         
             <Link href="/contact" className="mr-5 hover:text-gray-900">
               Contact
             </Link>

@@ -1,6 +1,6 @@
-import Link from "next/link";
+
+
 import { getList } from "../../libs/microcms";
-import Image from "next/image";
 import Pagination from "../../components/shared/Pagination";
 import BlogPost from "@/components/shared/BlogCard";
 
@@ -8,6 +8,8 @@ export default async function StaticPage() {
   const { contents } = await getList();
 
   // ページの生成された時間を取得
+
+
 
 
   if (!contents || contents.length === 0) {
