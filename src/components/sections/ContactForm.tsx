@@ -53,7 +53,7 @@ const ContactForm: React.FC = () => {
           value={email}
           onChange={handleEmailChange}
           required
-          className="w-full rounded-md border border-gray-300 px-3 py-2 text-gray-700 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-opacity-50"
+          className="w-1/2 rounded-md border border-gray-300 px-3 py-2 text-gray-700 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-opacity-50"
         />
       </div>
       <div className="space-y-1">
