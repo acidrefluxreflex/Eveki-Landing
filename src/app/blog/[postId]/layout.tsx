@@ -1,5 +1,5 @@
-import SideElement from "@/components/blog/SideBar";
-import { getDetail, getList } from "../../../libs/microcms";
+
+import { getList } from "../../../libs/microcms";
 
 export async function generateStaticParams() {
     const { contents } = await getList();

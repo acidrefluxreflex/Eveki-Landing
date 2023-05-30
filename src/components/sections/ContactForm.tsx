@@ -1,16 +1,12 @@
 import { useState } from "react";
 
-import { googleFormsToJson } from 'react-google-forms-hooks'
 
 // can use both full and shortened form url
-
 
 const ContactForm: React.FC = () => {
   const [email, setEmail] = useState("");
   const [body, setBody] = useState("");
   const [submitted, setSubmitted] = useState(false);
- 
-  
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
@@ -22,7 +18,8 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const url = "https://docs.google.com/forms/d/e/1FAIpQLSfxhvhUAkJXBgdFSFdiTgJk6CmJN41FUEiVm3kb7htRMRdh3w/viewform"
+    const url =
+      "https://docs.google.com/forms/d/e/1FAIpQLSfxhvhUAkJXBgdFSFdiTgJk6CmJN41FUEiVm3kb7htRMRdh3w/viewform";
     const googleFormUrl =
       "https://docs.google.com/forms/d/e/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/viewform?usp=pp_url&entry.XXXXXXXXXX=";
     const submitUrl = `${googleFormUrl}${email}&entry.XXXXXXXXXX=${body}`;

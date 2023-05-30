@@ -50,7 +50,6 @@ export default function RootLayout({
             }}
           ></iframe>
         </noscript>
-
         <Navbar />
         {children}
         <Footer></Footer>

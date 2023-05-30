@@ -1,6 +1,5 @@
 "use client";
 
-
 import Home from "@/components/TestMark";
 
 export default function About() {

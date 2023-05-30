@@ -23,7 +23,9 @@ const Hero: React.FC = () => {
             <div className="mb-8 px-2 text-lg font-medium text-black">
               <p>誰でも自分だけのAIを気軽に</p>
               <p>カスタマイズする世界へ</p>
-              <button className="btn my-5">ダウンロード</button>
+              <button className="btn my-5">
+                <a href="https://textcheckai.page.link/toapp">ダウンロード</a>
+              </button>
             </div>
           </div>
           <Image

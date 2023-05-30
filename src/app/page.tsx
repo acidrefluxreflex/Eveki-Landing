@@ -2,7 +2,6 @@
 
 import Hero from "@/components/sections/NewHero";
 import FeatureSection from "@/components/sections/FeatureSection";
-import { googleFormsToJson } from 'react-google-forms-hooks'
 import SupportUseSection from "@/components/sections/SupportSection";
 import ContactForm from "@/components/sections/GFContactForm";
 import DetailFeatureSection from "@/components/sections/DetailFeatureSection";
@@ -10,11 +9,6 @@ import UsagePlaneSection from "@/components/sections/UsagePlanSection";
 import SecondDownloadSection from "@/components/sections/SecondDownloadSection";
 
 export default function Home() {
-
-
-  
-
-
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <Hero />

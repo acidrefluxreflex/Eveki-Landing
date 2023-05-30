@@ -1,8 +1,6 @@
 import React from "react";
-import SVGAnimation from "../design/SVGAnimation";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import SVGIcon from "../icons/SVGIcos";
 import HowToUseCell from "../HowToUseCell";
 
 const features = [

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import {  markdownToHtml } from "@/libs/markdown-to-html";
-import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+
 
 type Props = {
   mdPath: string;

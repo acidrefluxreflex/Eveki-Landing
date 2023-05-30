@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
               Contact
             </Link>
           </div>
-          <div className="dropdown-end dropdown mx-2">
+          <div className="dropdown-end dropdown mx-2">ƒ
             <label tabIndex={0} className="btn-ghost btn lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
