@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
             <Link href="/blog" className="mr-5 hover:text-gray-900">
               Blog
             </Link>
-         
+
             <Link href="/contact" className="mr-5 hover:text-gray-900">
               Contact
             </Link>
@@ -80,19 +80,19 @@ const Navbar: React.FC = () => {
                 </Link>
               </li>
               <li>
-              <Link href="/blog" className="mr-5 hover:text-gray-900">
-              Blog
-            </Link>
+                <Link href="/blog" className="mr-5 hover:text-gray-900">
+                  Blog
+                </Link>
               </li>
               <li>
-              <Link href="/" className="mr-5 hover:text-gray-900">
-              Document
-            </Link>
+                <Link href="/" className="mr-5 hover:text-gray-900">
+                  Document
+                </Link>
               </li>
               <li>
-              <Link href="/contact" className="mr-5 hover:text-gray-900">
-              Contact
-            </Link>
+                <Link href="/contact" className="mr-5 hover:text-gray-900">
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>

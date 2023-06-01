@@ -1,8 +1,10 @@
 import { notFound } from "next/navigation";
 import parse from "html-react-parser";
 import { getDetail, getList } from "../../../libs/microcms";
+import Image from "next/image";
 import Link from "next/link";
 import dayjs from "dayjs";
+
 // プラグインが必要
 import ja from "dayjs/locale/ja";
 
@@ -32,7 +34,7 @@ export default async function StaticDetailPage({
   // ページの生成された時間を取得
 
   const proseSetting: string =
-    "prose  text-black prose-h2:text-black prose-a:text-blue-500 prose-strong:text-blue-500 prose-strong:font-bold prose-h2:border-b-2  prose-h2:text-3xl";
+    "prose  text-black prose-h1:text-black prose-h2:text-black prose-a:text-blue-500 prose-strong:text-blue-500 prose-strong:font-bold prose-h2:border-b-2  prose-h2:text-3xl";
 
   if (!post) {
     notFound();
@@ -41,6 +43,20 @@ export default async function StaticDetailPage({
   return (
     <div>
       <div className="max-w-2xl py-8">
+      <div id="IMAGE">
+        {post.eyecatch ? (
+          <Link href={`/blog/${post.id}`}>
+            <Image
+              src={post.eyecatch.url}
+              width={840}
+              height={630 / 4}
+              alt={post.title}
+            />
+          </Link>
+        ) : (
+          <div className="h-20 w-20 bg-gray-200"></div> // プレースホルダーとして表示する要素
+        )}
+      </div>
         <div className="breadcrumbs text-sm">
           <ul>
             <li>

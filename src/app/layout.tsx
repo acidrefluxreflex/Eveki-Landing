@@ -9,6 +9,14 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "AIキャラ作成アプリ　Eveki",
   description: "自分だけの人工知能が作れるアプリEvekiの公式サイトです",
+  
+  verification: {
+    other: {
+      "p:domain_verify": ['d57df8e16029fbe795edacf49fb3a629']
+    },
+  }
+  
+  
 };
 
 export default function RootLayout({
