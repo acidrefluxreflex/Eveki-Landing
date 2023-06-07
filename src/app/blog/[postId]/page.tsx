@@ -42,9 +42,9 @@ export async function generateMetadata({
 
   return {
     title: post.title,
-    description: post.content,
+    description: post.description,
   };
-  
+
 }
 
 export default async function StaticDetailPage({
