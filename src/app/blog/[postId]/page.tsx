@@ -42,37 +42,62 @@ export default async function StaticDetailPage({
 
   return (
     <div>
-      <div className="max-w-2xl py-8 mb-20">
-      <div id="IMAGE">
-        {post.eyecatch ? (
-          <Link href={`/blog/${post.id}`}>
-            <Image
-              src={post.eyecatch.url}
-              width={840}
-              height={630 / 4}
-              alt={post.title}
-            />
-          </Link>
-        ) : (
-          <div className="h-20 w-20 bg-gray-200"></div> // プレースホルダーとして表示する要素
-        )}
-      </div>
-        <div className="breadcrumbs text-sm">
+      <div className="mb-20 max-w-2xl py-8">
+        <div id="IMAGE">
+          {post.eyecatch ? (
+            <Link href={`/blog/${post.id}`}>
+              <Image
+                src={post.eyecatch.url}
+                width={840}
+                height={630 / 4}
+                alt={post.title}
+              />
+            </Link>
+          ) : (
+            <div className="h-20 w-20 bg-gray-200"></div> // プレースホルダーとして表示する要素
+          )}
+        </div>
+        <div
+          className="breadcrumbs text-sm"
+          itemScope
+          itemType="https://schema.org/BreadcrumbList"
+        >
           <ul>
-            <li>
-              <Link href="/blog">ブログ</Link>
-            </li>
-            <li>
-              <Link
-                href="/blog/category/[categoryId]"
-                as={`/blog/category/${post.category?.id ?? ""}`}
-              >
-                {post.category?.name ?? ""}
+            <li
+              itemProp="itemListElement"
+              itemScope
+              itemType="https://schema.org/ListItem"
+            >
+              <Link href="/blog" itemProp="item">
+                <p itemProp="name">ブログ</p>
               </Link>
+              <meta itemProp="position" content="1" />
             </li>
-            <li className="inline-block">{post.title}</li>
+            <li
+              itemProp="itemListElement"
+              itemScope
+              itemType="https://schema.org/ListItem"
+            >
+              <Link
+                href={`/blog/category/${post.category?.id ?? ""}`}
+                itemProp="item"
+              >
+                <p itemProp="name">{post.category?.name ?? ""}</p>
+              </Link>
+              <meta itemProp="position" content="2" />
+            </li>
+            <li
+              itemProp="itemListElement"
+              itemScope
+              itemType="https://schema.org/ListItem"
+            >
+              <span itemProp="name">{post.title}</span>
+              <meta itemProp="position" content="3" />
+            </li>
           </ul>
         </div>
+
+      
         <h2 className="mb-2 text-gray-600">{createdAt}</h2>
         <h1 className="mb-4 text-5xl font-bold">{post.title}</h1>
 
