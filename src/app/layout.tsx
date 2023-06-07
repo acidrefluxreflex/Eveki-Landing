@@ -9,14 +9,12 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "AIキャラ作成アプリ　Eveki",
   description: "自分だけの人工知能が作れるアプリEvekiの公式サイトです",
-  
+
   verification: {
     other: {
-      "p:domain_verify": ['d57df8e16029fbe795edacf49fb3a629']
+      "p:domain_verify": ["d57df8e16029fbe795edacf49fb3a629"],
     },
-  }
-  
-  
+  },
 };
 
 export default function RootLayout({
@@ -27,37 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Script
-        id="gtm-script"
+        src={`https://www.googletagmanager.com/gtm.js?id=${process.env.GTM_KEY}`}
         strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            function gtmInit(w,d,s,l,i) {
-              w[l]=w[l]||[];
-              w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-              var f=d.getElementsByTagName(s)[0],
-                  j=d.createElement(s),
-                  dl=l!='dataLayer'?'&l='+l:'';
-              j.async=true;
-              j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-              f.parentNode.insertBefore(j,f);
-            }
-            gtmInit(window,document,'script','dataLayer','${!process.env
-              .GTM_KEY}');
-          `,
-        }}
       />
       <body className={inter.className}>
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-PRTX3GF"
-            height="0"
-            width="0"
-            style={{
-              display: "none",
-              visibility: "hidden",
-            }}
-          ></iframe>
-        </noscript>
         <Navbar />
         {children}
         <Footer></Footer>
