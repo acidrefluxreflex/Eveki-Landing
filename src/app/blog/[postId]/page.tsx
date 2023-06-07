@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import parse from "html-react-parser";
 import { getDetail, getList } from "../../../libs/microcms";
+import { Metadata, ResolvingMetadata } from 'next';
 import Image from "next/image";
 import Link from "next/link";
 import dayjs from "dayjs";
@@ -9,6 +10,12 @@ import dayjs from "dayjs";
 import ja from "dayjs/locale/ja";
 
 dayjs.locale(ja);
+
+type Props = {
+  params: { id: string };
+};
+
+
 
 export async function generateStaticParams() {
   const { contents } = await getList();
@@ -20,6 +27,24 @@ export async function generateStaticParams() {
   });
 
   return [...paths];
+}
+
+export async function generateMetadata({
+  params: { postId },
+}: {
+  params: { postId: string };
+}): Promise<Metadata> {
+  // read route params
+
+  const post = await getDetail(postId);
+
+  // fetch data
+
+  return {
+    title: post.title,
+    description: post.content,
+  };
+  
 }
 
 export default async function StaticDetailPage({
