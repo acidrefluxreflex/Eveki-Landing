@@ -30,7 +30,7 @@ export default function RootLayout({
         "name": "AIキャラクター制作アプリ Eveki",
         "image": "https://eveki.net/_next/image?url=%2Fimages%2FroundedIcon.png&w=640&q=75",
         "url": "https://eveki.net/",
-        "applicationCategory": "エンターテインメント",
+        "applicationCategory": "EntertainmentApplication",
         "downloadUrl": "https://textcheckai.page.link/toapp",
         "operatingSystem": "iOS",
         "screenshot": "https://eveki.net/_next/image?url=%2Fimages%2FchatImage.png&w=1920&q=75"
