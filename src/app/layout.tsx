@@ -24,10 +24,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Script
-        src={`https://www.googletagmanager.com/gtm.js?id=${process.env.GTM_KEY}`}
-        strategy="afterInteractive"
-      />
+      <head>
+        <Script
+          src={`https://www.googletagmanager.com/gtm.js?id=${process.env.GTM_KEY}`}
+          strategy="afterInteractive"
+        />
+      </head>
       <body className={inter.className}>
         <Navbar />
         {children}
