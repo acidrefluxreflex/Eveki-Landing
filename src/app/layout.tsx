@@ -22,12 +22,34 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  function addProductJsonLd() {
+    return {
+      __html: `{
+        "@context": "http://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "AIキャラクター制作アプリ Eveki",
+        "image": "https://eveki.net/_next/image?url=%2Fimages%2FroundedIcon.png&w=640&q=75",
+        "url": "https://eveki.net/",
+        "applicationCategory": "エンターテインメント",
+        "downloadUrl": "https://textcheckai.page.link/toapp",
+        "operatingSystem": "iOS",
+        "screenshot": "https://eveki.net/_next/image?url=%2Fimages%2FchatImage.png&w=1920&q=75"
+      }
+  `,
+    };
+  }
+
   return (
     <html lang="en">
       <head>
         <Script
           src={`https://www.googletagmanager.com/gtm.js?id=${process.env.GTM_KEY}`}
           strategy="afterInteractive"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={addProductJsonLd()}
+          key="product-jsonld"
         />
       </head>
       <body className={inter.className}>
