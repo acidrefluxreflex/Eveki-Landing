@@ -8,6 +8,8 @@ import DetailFeatureSection from "@/components/sections/DetailFeatureSection";
 import UsagePlaneSection from "@/components/sections/UsagePlanSection";
 import SecondDownloadSection from "@/components/sections/SecondDownloadSection";
 
+
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">

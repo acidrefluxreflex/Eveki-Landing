@@ -3,20 +3,38 @@ import { Inter } from "next/font/google";
 import Footer from "@/components/sections/Footer";
 import Navbar from "@/components/NavVar";
 import Script from "next/script";
-
+import { Metadata } from "next";
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "AIキャラ作成アプリ　Eveki",
   description: "自分だけの人工知能が作れるアプリEvekiの公式サイトです",
-twitter: {
-  images: ["https://eveki.net/_next/image?url=%2Fimages%2FforTwitter.webp&w=12000&q=75"],
-},
+  twitter: {
+    images: [
+      "https://eveki.net/_next/image?url=%2Fimages%2FforTwitter.webp&w=12000&q=75",
+    ],
+  },
   verification: {
     other: {
       "p:domain_verify": ["d57df8e16029fbe795edacf49fb3a629"],
     },
   },
+  openGraph: {
+    title: "AIキャラ作成アプリ　Eveki",
+    description: "自分だけの人工知能が作れるアプリEvekiの公式サイトです",
+    url: 'https://eveki.net',
+    siteName: 'eveki.net',
+    images: [
+      {
+        url: 'https://eveki.net/_next/image?url=%2Fimages%2FforTwitter.webp',
+        width: 1200,
+        height: 600,
+      },
+    ],
+    locale: 'ja_JP',
+    type: 'website',
+  },
+
 };
 
 export default function RootLayout({
