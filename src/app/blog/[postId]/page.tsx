@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import parse from "html-react-parser";
 import { getDetail, getList } from "../../../libs/microcms";
-import { Metadata, ResolvingMetadata } from 'next';
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import dayjs from "dayjs";
@@ -14,8 +14,6 @@ dayjs.locale(ja);
 type Props = {
   params: { id: string };
 };
-
-
 
 export async function generateStaticParams() {
   const { contents } = await getList();
@@ -43,8 +41,24 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.description,
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      url: "https://eveki.net/blog/" + post.id,
+      siteName: "eveki.net",
+      images: [
+        {
+          url:
+            post.eyecatch?.url ||
+            "https://eveki.net/_next/image?url=%2Fimages%2FforTwitter.webp",
+          width: 1200,
+          height: 600,
+        },
+      ],
+      locale: "ja_JP",
+      type: "website",
+    },
   };
-
 }
 
 export default async function StaticDetailPage({
@@ -122,7 +136,6 @@ export default async function StaticDetailPage({
           </ul>
         </div>
 
-      
         <h2 className="mb-2 text-gray-600">{createdAt}</h2>
         <h1 className="mb-4 text-5xl font-bold">{post.title}</h1>
 
