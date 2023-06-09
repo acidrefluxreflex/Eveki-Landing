@@ -51,9 +51,8 @@ export default async function StaticPage({
         })}
       </ul>
       <Pagination
-        currentPageNumber={1}
-        maxPageNumber={Math.ceil(contents.length / 4)}
-      />
+          totalCount={contents.length}
+        />
     </div>
   );
 }

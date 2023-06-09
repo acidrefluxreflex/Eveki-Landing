@@ -10,8 +10,8 @@ const EvekiDownloadSection: React.FC = () => {
     <div className="items-center justify-center text-center">
     <div className="flex justify-center ">
       {/* Render icon */}
-      <div>
-      <Image src="/images/roundedIcon.png" alt="Eveki" width={iconSize} height={iconSize} />
+      <div className="hidden lg:block">
+      <Image src="/images/roundedIcon.png"  alt="Eveki" width={iconSize} height={iconSize}  />
       </div>
       <div className="animate-fade-in items-center sm:block lg:flex ">
         {/* Render text section */}

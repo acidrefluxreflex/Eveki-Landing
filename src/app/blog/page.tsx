@@ -1,8 +1,7 @@
 import { getList } from "../../libs/microcms";
 import Pagination from "../../components/shared/Pagination";
 import BlogPost from "@/components/shared/BlogCard";
-import { Metadata } from 'next';
- 
+import { Metadata } from "next";
 
 export default async function StaticPage() {
   const { contents } = await getList();
@@ -23,11 +22,6 @@ export default async function StaticPage() {
             </div>
           );
         })}
-
-        <Pagination
-          currentPageNumber={1}
-          maxPageNumber={Math.ceil(contents.length / 4)}
-        />
       </div>
     </div>
   );
