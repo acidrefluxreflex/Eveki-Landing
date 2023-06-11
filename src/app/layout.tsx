@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "AIキャラ作成アプリ　Eveki",
+    title: "Eveki：AIキャラ作成アプリ",
     description: "自分だけの人工知能が作れるアプリEvekiの公式サイトです",
     url: 'https://eveki.net',
     siteName: 'eveki.net',
