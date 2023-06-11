@@ -72,7 +72,7 @@ const About = () => {
           AIシェアシステム
         </h2>
         <Image
-          src="/contents/assets/2 (2).jpg"
+          src="/contents/assets/product4.jpg"
           alt="Eveki product"
           width="1280"
           height="600"
