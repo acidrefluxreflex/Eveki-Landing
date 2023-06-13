@@ -17,25 +17,24 @@ export const metadata: Metadata = {
   verification: {
     other: {
       "p:domain_verify": ["d57df8e16029fbe795edacf49fb3a629"],
-      "yandex-verification":["0099049ad683c27e"],
+      "yandex-verification": ["0099049ad683c27e"],
     },
   },
   openGraph: {
     title: "Eveki：AIキャラ作成アプリ",
     description: "自分だけの人工知能が作れるアプリEvekiの公式サイトです",
-    url: 'https://eveki.net',
-    siteName: 'eveki.net',
+    url: "https://eveki.net",
+    siteName: "eveki.net",
     images: [
       {
-        url: 'https://eveki.net/_next/image?url=%2Fimages%2FforTwitter.jpg&w=12000&q=75',
+        url: "https://eveki.net/_next/image?url=%2Fimages%2FforTwitter.jpg&w=12000&q=75",
         width: 1200,
         height: 600,
       },
     ],
-    locale: 'ja_JP',
-    type: 'website',
+    locale: "ja_JP",
+    type: "website",
   },
-
 };
 
 export default function RootLayout({
@@ -74,6 +73,18 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TT4K8PK"
+            height="0"
+            width="0"
+            style={{
+              display: "none",
+              visibility: "hidden",
+            }}
+          ></iframe>
+        </noscript>
+
         <Navbar />
         {children}
         <Footer></Footer>
