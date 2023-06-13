@@ -60,7 +60,7 @@ export default function RootLayout({
   }
 
   return (
-    <html lang="en">
+    <html lang="ja">
       <head>
         <Script
           src={`https://www.googletagmanager.com/gtm.js?id=${process.env.GTM_KEY}`}

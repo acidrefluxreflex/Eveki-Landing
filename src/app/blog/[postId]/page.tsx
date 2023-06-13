@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import parse from "html-react-parser";
 import { getDetail, getList } from "../../../libs/microcms";
+
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -69,7 +70,7 @@ export default async function StaticDetailPage({
   const post = await getDetail(postId);
 
   const createdAt = dayjs(post.createdAt).format("YYYY年MM月DD日");
-
+  
   // ページの生成された時間を取得
 
   const proseSetting: string =
@@ -80,7 +81,10 @@ export default async function StaticDetailPage({
   }
 
   return (
+    <>
+   
     <div>
+     
       <div className="mb-20 max-w-2xl py-8">
         <div id="IMAGE">
           {post.eyecatch ? (
@@ -151,5 +155,6 @@ export default async function StaticDetailPage({
         <div className={proseSetting}>{parse(post.content)}</div>
       </div>
     </div>
+    </>
   );
 }

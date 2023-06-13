@@ -1,0 +1,25 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "ABCDE12345.com.example.app",
+        "paths": ["*"]
+      }
+    ]
+  },
+  "appclips": {
+    "apps": [
+        
+    ],
+    "details": [
+      {
+        "appID": "TeamID.ClipBundleID",
+        "paths": [
+          "/your-app-clip-path-1",
+          "/your-app-clip-path-2/*"
+        ]
+      }
+    ]
+  }
+}
