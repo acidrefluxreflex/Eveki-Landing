@@ -11,12 +11,13 @@ export const metadata: Metadata = {
   description: "自分だけの人工知能が作れるアプリEvekiの公式サイトです",
   twitter: {
     images: [
-      "https://eveki.net/_next/image?url=%2Fimages%2FforTwitter.webp&w=12000&q=75",
+      "https://eveki.net/_next/image?url=%2Fimages%2FforTwitter.jpg&w=12000&q=75",
     ],
   },
   verification: {
     other: {
       "p:domain_verify": ["d57df8e16029fbe795edacf49fb3a629"],
+      "yandex-verification":["0099049ad683c27e"],
     },
   },
   openGraph: {
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     siteName: 'eveki.net',
     images: [
       {
-        url: 'https://eveki.net/_next/image?url=%2Fimages%2FforTwitter.webp',
+        url: 'https://eveki.net/_next/image?url=%2Fimages%2FforTwitter.jpg&w=12000&q=75',
         width: 1200,
         height: 600,
       },
