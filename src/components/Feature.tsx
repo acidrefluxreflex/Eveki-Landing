@@ -30,7 +30,7 @@ const Feature: FC<FeatureProps> = ({
   const variants = {
     hidden: {
       opacity: 0,
-      x:  -100,
+      x: -100,
     },
     visible: {
       opacity: 1,
@@ -46,7 +46,7 @@ const Feature: FC<FeatureProps> = ({
     <div id="BASE" className="py-9">
       <div className="hidden justify-center py-5 lg:flex ">
         <motion.div
-          className="items-center justify-center p-0 max-w-full"
+          className="max-w-full items-center justify-center p-0"
           ref={ref}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
@@ -59,9 +59,11 @@ const Feature: FC<FeatureProps> = ({
           }}
         >
           <div className={isLeft ? rightText : leftText}>
-            <h2 className="text-6xl font-bold mb-9">{title}</h2>
+            <div style={{ fontFamily: "Sifonn" }}>
+              <h2 className="mb-9 text-8xl font-medium text-[#76428C]">{title}</h2>
+            </div>
             {splitText.map((line, index) => (
-              <p key={index} className="text-lg mt-4">
+              <p key={index} className="mt-4 text-md">
                 {line}
                 {index !== splitText.length - 1 && <br />}
               </p>
@@ -81,9 +83,11 @@ const Feature: FC<FeatureProps> = ({
       <div className="items-center justify-center py-5 lg:hidden">
         <div className="min-h-screen p-4">
           <div className="m-7 p-6">
-            <h2 className="text-3xl font-medium mb-9">{title}</h2>
+            <div style={{ fontFamily: "Sifonn" }}>
+              <h2 className="mb-9 text-3xl font-medium">{title}</h2>
+            </div>
             {splitText.map((line, index) => (
-              <p key={index} className="text-lg mt-4">
+              <p key={index} className="mt-4 text-lg">
                 {line}
                 {index !== splitText.length - 1 && <br />}
               </p>

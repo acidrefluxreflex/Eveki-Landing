@@ -1,14 +1,13 @@
 "use client";
 
-import Hero from "@/components/sections/NewHero";
+//import Hero from "@/components/sections/NewHero";
+import Hero from "@/components/BackGroundHero";
 import FeatureSection from "@/components/sections/FeatureSection";
 import SupportUseSection from "@/components/sections/SupportSection";
 import ContactForm from "@/components/sections/GFContactForm";
 import DetailFeatureSection from "@/components/sections/DetailFeatureSection";
 import UsagePlaneSection from "@/components/sections/UsagePlanSection";
 import SecondDownloadSection from "@/components/sections/SecondDownloadSection";
-
-
 
 export default function Home() {
   return (

@@ -2,11 +2,12 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
-import Hix from "./icons/Hix";
 
 const Navbar: React.FC = () => {
   const [isTop, setIsTop] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navItemClass = `mr-5 ${ isTop ? "" : "hover:text-gray-900"} `
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,7 +26,7 @@ const Navbar: React.FC = () => {
           : "border-solid bg-primary bg-opacity-80 drop-shadow-2xl backdrop-blur-lg backdrop-filter"
       } 
       ${
-        isTop ? " text-black" : "text-white"
+        isTop ? " text-[#8F77B5] " : "text-white"
       } mx-md navbar items-center transition-all duration-500 ease-in-out`}
     >
       <div className="m-0 flex-1 px-1 pt-1">
@@ -39,17 +40,17 @@ const Navbar: React.FC = () => {
       <div className="flex-none">
         <nav className="menu menu-horizontal px-1 font-medium">
           <div className="hidden lg:flex">
-            <Link href="/about" className="mr-5 hover:text-gray-900">
+            <Link href="/about" className={navItemClass}>
               About
             </Link>
-            <Link href="/product" className="mr-5 hover:text-gray-900">
+            <Link href="/product" className={navItemClass}>
               Product
             </Link>
-            <Link href="/blog" className="mr-5 hover:text-gray-900">
+            <Link href="/blog" className={navItemClass}>
               Blog
             </Link>
 
-            <Link href="/contact" className="mr-5 hover:text-gray-900">
+            <Link href="/contact" className={navItemClass}>
               Contact
             </Link>
           </div>
@@ -72,7 +73,7 @@ const Navbar: React.FC = () => {
             </label>
             <ul
               tabIndex={0}
-              className="dropdown-content menu rounded-box glass menu-compact mt-3 w-52 p-2 shadow"
+              className="dropdown-content menu rounded-box glass menu-compact mt-3 w-52 p-2 text-black shadow"
             >
               <li>
                 <Link href="/about" className="mr-5 hover:text-gray-900">
@@ -85,8 +86,8 @@ const Navbar: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/" className="mr-5 hover:text-gray-900">
-                  Document
+                <Link href="product" className="mr-5 hover:text-gray-900">
+                  Product
                 </Link>
               </li>
               <li>

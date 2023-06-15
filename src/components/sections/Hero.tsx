@@ -17,12 +17,12 @@ const Hero: React.FC = () => {
             className="block w-3/4 justify-start px-5 text-left "
           >
             <div className="container" style={{ fontFamily: "Sifonn" }}>
-              <p className="p-2">AIキャラクター制作アプリ</p>
+              <h2 className="p-2">AIキャラクター制作アプリ</h2>
               <h1 className="text-9xl font-bold text-black ">Eveki</h1>
             </div>
             <div className="mb-8 px-2 text-lg font-medium text-black">
-              <p>誰でも自分だけのAIを気軽に</p>
-              <p>カスタマイズする世界へ</p>
+              <h3>誰でも自分だけのAIを気軽に</h3>
+              <h3>カスタマイズする世界へ</h3>
               <button className="btn my-5">
                 <a href="https://textcheckai.page.link/toapp">ダウンロード</a>
               </button>

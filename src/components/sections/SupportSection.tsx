@@ -4,15 +4,13 @@ import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 
 const HowToUseSection: React.FC = () => {
-
-
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.3,
   });
 
   return (
-    <section className="flex justify-center items-center bg-[#dcccde25] lg:pt-20">
+    <section className="flex items-center justify-center bg-[#dcccde25] lg:pt-20">
       <div className="text-center">
         <div className=" text-center">
           <h2 className="text-5xl font-bold">個性豊かな会話AIを気軽に作成</h2>

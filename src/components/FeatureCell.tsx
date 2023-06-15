@@ -21,7 +21,9 @@ const FeatureCell: FC<FeatureProps> = ({
   return (
     <div className="flex">
       <div className="p-6 ">
+      <div style={{ fontFamily: "Sifonn" }}>
         <h2 className="text-3xl font-medium">{title}</h2>
+        </div>
         <p className="mt-4 w-64">{text}</p>
       </div>
       <div className="h-98 w-1/2">

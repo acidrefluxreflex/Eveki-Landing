@@ -1,4 +1,3 @@
-
 import {
   getCategory,
   getListForCategory,
@@ -29,8 +28,6 @@ export default async function StaticPage({
 
   const { contents } = await getList();
 
-
-
   const filtered = await contents.filter(
     (post) => post.category?.id === categoryName
   );
@@ -45,14 +42,12 @@ export default async function StaticPage({
         {filtered.map((post) => {
           return (
             <div key={post.id} className="">
-            <BlogPost post={post} />
+              <BlogPost post={post} />
             </div>
           );
         })}
       </ul>
-      <Pagination
-          totalCount={contents.length}
-        />
+      <Pagination totalCount={contents.length} />
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-
 // can use both full and shortened form url
 
 const AppInfoCard: React.FC = () => {
