@@ -38,7 +38,8 @@ const ContactForm: React.FC = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mx-auto w-3/5 space-y-4 py-7">
+    <div>
+    <form id="DESKTOP" onSubmit={handleSubmit} className="hidden md:block mx-auto w-3/5 space-y-4 py-7">
       <div className="space-y-1">
         <label htmlFor="email" className="font-medium text-gray-700">
           メールアドレス<span className="text-red-600">*</span>
@@ -74,6 +75,43 @@ const ContactForm: React.FC = () => {
         </button>
       </div>
     </form>
+    <form id="SMARTPHONE" onSubmit={handleSubmit} className="block md:hidden mx-auto  space-y-4 py-7">
+      <div className="space-y-1">
+        <label htmlFor="email" className="font-medium text-gray-700">
+          メールアドス<span className="text-red-600">*</span>
+        </label>
+        <input
+          id="email"
+          type="email"
+          value={email}
+          onChange={handleEmailChange}
+          required
+          className="rounded-md border border-gray-300 px-3 py-2 text-gray-700 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-opacity-50"
+        />
+      </div>
+      <div className="space-y-1">
+        <label htmlFor="body" className="font-medium text-gray-700">
+          お問い合わせ本文<span className="text-red-600">*</span>
+        </label>
+        <textarea
+          id="body"
+          value={body}
+          onChange={handleBodyChange}
+          required
+          className="w-full rounded-md border border-gray-300 px-3 py-2 text-gray-700 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-opacity-50"
+          rows={6}
+        />
+      </div>
+      <div className="flex justify-end">
+        <button
+          type="submit"
+          className="rounded-md bg-indigo-500 px-4 py-2 text-white hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+    </div>
   );
 };
 

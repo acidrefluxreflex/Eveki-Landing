@@ -83,7 +83,7 @@ export default async function StaticDetailPage({
   return (
     <main className="">
       <article>
-        <div className="mb-20 max-w-2xl py-8">
+        <div className="mb-20 max-w-2xl px-3 py-8">
           <div id="IMAGE">
             {post.eyecatch ? (
               <Link href={`/blog/${post.id}`}>

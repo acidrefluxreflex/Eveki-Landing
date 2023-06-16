@@ -38,6 +38,7 @@ const About = () => {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between py-12">
+       <article className="px-5 py-8">
       <div className={proseSetting}>
         <h1 id="eveki%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">Evekiについて</h1>
         <h2 id="%E6%A6%82%E8%A6%81%E3%81%A8%E7%89%B9%E5%BE%B4">概要と特徴</h2>
@@ -104,6 +105,7 @@ const About = () => {
           差別的な内容や性的な内容を含む返答を防ぐこtに加え、ユーザー側からの攻撃的なメッセージからデータを守ることも可能です。人工知能導入のリスクを減らした上で使用、導入することができます。
         </p>
       </div>
+      </article>
     </main>
   );
 };

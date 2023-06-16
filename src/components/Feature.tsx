@@ -44,7 +44,7 @@ const Feature: FC<FeatureProps> = ({
 
   return (
     <div id="BASE" className="py-9">
-      <div className="hidden justify-center py-5 lg:flex ">
+      <div className="hidden justify-center lg:py-5 lg:flex sm:py-0 ">
         <motion.div
           className="max-w-full items-center justify-center p-0"
           ref={ref}
@@ -55,15 +55,17 @@ const Feature: FC<FeatureProps> = ({
             //width: "100%", // 親要素の幅いっぱいに伸ばす
             display: "flex",
             flexDirection: isLeft ? "row-reverse" : "row", // isLeft が true の場合は逆向きに並べる
-            //alignItems: "center", // 子要素を中央揃えにする
+          
           }}
         >
           <div className={isLeft ? rightText : leftText}>
             <div style={{ fontFamily: "Sifonn" }}>
-              <h2 className="mb-9 text-8xl font-medium text-[#76428C]">{title}</h2>
+              <h2 className="mb-9 text-8xl font-medium text-[#76428C]">
+                {title}
+              </h2>
             </div>
             {splitText.map((line, index) => (
-              <p key={index} className="mt-4 text-md">
+              <p key={index} className="text-md mt-4">
                 {line}
                 {index !== splitText.length - 1 && <br />}
               </p>
@@ -81,13 +83,15 @@ const Feature: FC<FeatureProps> = ({
         </motion.div>
       </div>
       <div className="items-center justify-center py-5 lg:hidden">
-        <div className="min-h-screen p-4">
-          <div className="m-7 p-6">
+        <div className=" p-4">
+          <div className="m-5 my-3 px-6">
             <div style={{ fontFamily: "Sifonn" }}>
-              <h2 className="mb-9 text-3xl font-medium">{title}</h2>
+              <h2 className="mb-7 text-4xl font-medium  text-[#76428C]">
+                {title}
+              </h2>
             </div>
             {splitText.map((line, index) => (
-              <p key={index} className="mt-4 text-lg">
+              <p key={index} className="mt-4 text-sm">
                 {line}
                 {index !== splitText.length - 1 && <br />}
               </p>

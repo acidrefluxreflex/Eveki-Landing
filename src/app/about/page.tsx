@@ -40,6 +40,7 @@ const About = () =>  {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between py-12">
+      <article className="px-5 py-8">
       <div className={proseSetting}>
         <h1 id="eveki%E3%81%AE%E6%AD%A9%E3%81%BF">Evekiの歩み</h1>
         <h2 id="%E7%9D%80%E6%83%B3%E3%81%A8%E7%99%BA%E8%B6%B3">着想と発足</h2>
@@ -89,6 +90,7 @@ const About = () =>  {
           私たちはこの課題を重く見ており、開発においては道徳を常に意識しています。それは過激な発言をしないといったことだけではなく、誤った使い方の防止など多岐に渡るべきだと考えています。
         </p>
       </div>
+      </article>
     </main>
   );
 }

@@ -3,7 +3,7 @@ import Feature from "../Feature";
 
 const features = [
   {
-    icon: "/images/cards.jpg",
+    icon: "/images/cards.webp",
     title: "Share",
     description: `作成したAIは、QRコードを使って簡単に情報を共有することができます。Qカメラを使って簡単にアクセスすることができます。
     また、このAIは、画像としてSNSにシェアできるAIカードも生成することができます。AIカードを作成する際には、自動的にレイアウトやデザインが生成されます。そのため、デザインの知識がない人でも簡単に美しいAIカードを作成することができます。`,
