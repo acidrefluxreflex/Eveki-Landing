@@ -20,8 +20,10 @@ export const metadata: Metadata = {
     other: {
       "p:domain_verify": ["d57df8e16029fbe795edacf49fb3a629"],
       "yandex-verification": ["0099049ad683c27e"],
+      "apple-itunes-app": ["app-id=6444040191, app-clip-bundle-id=com.wakaba.Eveki.Clip"],
     },
   },
+  
   openGraph: {
     title: "Eveki：AIキャラ作成アプリ",
     description: "自分だけの人工知能が作れるアプリEvekiの公式サイトです",
