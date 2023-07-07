@@ -8,11 +8,20 @@ const Footer: React.FC = () => {
         <div id="LINK SECTION">
           <span className="footer-title">Company</span>
           <Link href="/about" className="link-hover link">
-            About us
+            About
+          </Link>
+          <Link href="/product" className="link-hover link">
+            Product
+          </Link>
+          <Link href="/blog" className="link-hover link">
+            Blog
           </Link>
           <Link href="/contact" className="link-hover link">
             Contact
           </Link>
+        </div>
+        <div id="INFO">
+          <span className="footer-title">Information</span>
           <Link href="/about/privacy" className="link-hover link">
             Privacy
           </Link>

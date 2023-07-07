@@ -8,7 +8,9 @@ const Hero: React.FC = () => {
       <div className="hero-content flex-col lg:flex-row-reverse">
         <Image src="/images/top.png" alt="" height={size} width={size} />
         <div>
-          <div style={{ fontFamily: "Sifonn" }}>
+          <div style={{ 
+            fontFamily: "Sifonn"
+         }}>
             <p className="p-2">AIキャラクター制作アプリ</p>
             <h1 className="text-9xl font-bold text-black ">Eveki</h1>
           </div>

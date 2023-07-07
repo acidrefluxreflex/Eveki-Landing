@@ -1,4 +1,9 @@
-import Image from "next/image";
+import localFont from 'next/font/local'
+ 
+// Font files can be colocated inside of `app`
+
+
+
 
 const Hero: React.FC = () => {
   const size = 550;
@@ -16,7 +21,7 @@ const Hero: React.FC = () => {
         <div className="hero-content ml-64 pr-[430px] ">
           <div className="container max-w-md ">
             <p className="p-2 text-2xl">AIキャラクター制作アプリ</p>
-            <div style={{ fontFamily: "Sifonn" }}>
+            <div className="container" style={{ fontFamily: "Sifonn" }}>
               <h1 className="text-9xl font-bold text-white ">Eveki</h1>
             </div>
             <div className="mb-8 px-2 text-lg font-medium ">
