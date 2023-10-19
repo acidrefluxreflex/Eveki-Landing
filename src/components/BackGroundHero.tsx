@@ -21,8 +21,8 @@ const Hero: React.FC = () => {
         <div className="hero-content ml-64 pr-[430px] ">
           <div className="container max-w-md ">
             <p className="p-2 text-2xl">AIキャラクター制作アプリ</p>
-            <div className="container" style={{ fontFamily: "Sifonn" }}>
-              <h1 className="text-9xl font-bold text-white ">Eveki</h1>
+            <div className="container" style={{ fontFamily: "Futura" }}>
+              <h1 className="text-9xl font-medium text-white ">Eveki</h1>
             </div>
             <div className="mb-8 px-2 text-lg font-medium ">
               <p>誰でも自分だけのAIを気軽に</p>

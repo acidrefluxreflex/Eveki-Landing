@@ -28,7 +28,12 @@ const Footer: React.FC = () => {
           <Link href="/blog" className="link-hover link">
             Blog
           </Link>
+          <span className="footer-title">Product</span>
+          <a href="https://zeboot.net/" className="link-hover link">
+            Zeboot
+          </a>
         </div>
+
         <div id="SOCIAL">
           <span className="footer-title">Social</span>
           <div className="grid grid-flow-col gap-4">

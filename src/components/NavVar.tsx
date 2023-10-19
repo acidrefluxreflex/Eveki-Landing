@@ -30,8 +30,8 @@ const Navbar: React.FC = () => {
       } mx-md navbar items-center transition-all duration-500 ease-in-out`}
     >
       <div className="m-0 flex-1 px-1 pt-1">
-        <div style={{ fontFamily: "Sifonn" }}>
-          <Link href="/" className="ml-3 text-3xl">
+        <div style={{ fontFamily: "Futura" }}>
+          <Link href="/" className="ml-3 text-3xl font-medium">
             Eveki
           </Link>
         </div>

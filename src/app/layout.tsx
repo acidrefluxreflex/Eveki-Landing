@@ -4,7 +4,7 @@ import Footer from "@/components/sections/Footer";
 import Navbar from "@/components/NavVar";
 import Script from "next/script";
 import { Metadata } from "next";
-import Analytics from "@/libs/Google/Analytics";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
