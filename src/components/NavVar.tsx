@@ -2,12 +2,11 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
-
 const Navbar: React.FC = () => {
   const [isTop, setIsTop] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navItemClass = `mr-5 ${ isTop ? "" : "hover:text-gray-900"} `
+  const navItemClass = `mr-5 ${isTop ? "" : "hover:text-gray-900"} `;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,7 +25,7 @@ const Navbar: React.FC = () => {
           : "border-solid bg-primary bg-opacity-80 drop-shadow-2xl backdrop-blur-lg backdrop-filter"
       } 
       ${
-        isTop ? " text-[#8F77B5] " : "text-white"
+        isTop ? " text-[#f2f2f7] " : "text-white"
       } mx-md navbar items-center transition-all duration-500 ease-in-out`}
     >
       <div className="m-0 flex-1 px-1 pt-1">
