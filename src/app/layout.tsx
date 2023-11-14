@@ -1,7 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Footer from "@/components/sections/Footer";
-import Navbar from "@/components/NavVar";
+import Navbar from "@/components/Navbar";
 import Script from "next/script";
 import { Metadata } from "next";
 import { SoftwareApplication, WithContext } from "schema-dts";
@@ -48,27 +48,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  function addProductJsonLd() {
-    return {
-      __html: `{
-        "@context": "http://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "AIキャラクター制作アプリ Eveki",
-        "image": "https://eveki.net/_next/image?url=%2Fimages%2FroundedIcon.png&w=640&q=75",
-        "url": "https://eveki.net/",
-        "applicationCategory": "EntertainmentApplication",
-        "downloadUrl": "https://textcheckai.page.link/toapp",
-        "operatingSystem": "iOS",
-        "screenshot": "https://eveki.net/_next/image?url=%2Fimages%2FchatImage.png&w=1920&q=75",
-        "offers": {
-          "@type": "Offer",
-          "price": "0"
-        }
-      }
-  `,
-    };
-  }
-
   const softwareApplication: WithContext<SoftwareApplication> = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
