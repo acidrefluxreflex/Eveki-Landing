@@ -7,7 +7,6 @@ import Image from "next/image";
 import Link from "next/link";
 import dayjs from "dayjs";
 
-
 // プラグインが必要
 import ja from "dayjs/locale/ja";
 
@@ -79,10 +78,9 @@ export default async function StaticDetailPage({
     author: {
       "@type": "Person",
       name: "Kabuki",
-      url: "i-kabuki.com"
-    }
+      url: "i-kabuki.com",
+    },
   };
-
 
   // ページの生成された時間を取得
 
@@ -95,13 +93,13 @@ export default async function StaticDetailPage({
 
   return (
     <main className="">
-       <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(jsonld),
-          }}
-          key="product-jsonld"
-        />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonld),
+        }}
+        key="product-jsonld"
+      />
       <article>
         <div className="mb-20 max-w-2xl px-3 py-8">
           <div id="IMAGE">
