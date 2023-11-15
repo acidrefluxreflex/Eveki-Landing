@@ -69,6 +69,7 @@ export default async function StaticDetailPage({
 }) {
   const post = await getDetail(postId);
   const createdAt = dayjs(post.createdAt).format("YYYY年MM月DD日");
+  
   const jsonld: WithContext<Article> = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -94,12 +95,7 @@ export default async function StaticDetailPage({
   return (
     <>
     <head>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(jsonld),
-        }}
-      />
+     
     </head>
     <main className="">
       <article>
