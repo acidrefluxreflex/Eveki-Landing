@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import parse from "html-react-parser";
 import { getDetail, getList } from "../../../libs/microcms";
-import { Article, WithContext } from "schema-dts";
+
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -68,20 +68,8 @@ export default async function StaticDetailPage({
   params: { postId: string };
 }) {
   const post = await getDetail(postId);
+
   const createdAt = dayjs(post.createdAt).format("YYYY年MM月DD日");
-  
-  const jsonld: WithContext<Article> = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.title,
-    image: post.eyecatch?.url,
-    datePublished: post.createdAt,
-    author: {
-      "@type": "Person",
-      name: "Kabuki",
-      url: "https://i-kabuki.com",
-    },
-  };
 
   // ページの生成された時間を取得
 
@@ -93,10 +81,6 @@ export default async function StaticDetailPage({
   }
 
   return (
-    <>
-    <head>
-     
-    </head>
     <main className="">
       <article>
         <div className="mb-20 max-w-2xl px-3 py-8">
@@ -170,6 +154,5 @@ export default async function StaticDetailPage({
         </div>
       </article>
     </main>
-    </>
   );
 }
