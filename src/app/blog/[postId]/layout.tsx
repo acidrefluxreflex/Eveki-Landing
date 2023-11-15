@@ -1,5 +1,4 @@
 import { getDetail, getList } from "../../../libs/microcms";
-import { Article, WithContext } from "schema-dts";
 
 export async function generateStaticParams() {
   const { contents } = await getList();
@@ -18,9 +17,5 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
- 
-
-  {
-    return {children};
-  }
+  return <>{children}</>;
 }
