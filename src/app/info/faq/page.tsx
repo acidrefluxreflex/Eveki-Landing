@@ -2,7 +2,7 @@ import PageHeadImage from "@/components/shared/PageHeadImage";
 
 export default function FAQ() {
   const proseSetting: string =
-    "prose text-black prose-h1:text-black prose-h2:text-black prose-a:text-blue-500 prose-strong:text-blue-500 prose-strong:font-bold prose-h2:border-b-2  prose-h2:text-3xl";
+    "prose text-black prose-h1:text-black prose-h2:text-black prose-a:text-blue-500 prose-strong:text-blue-500 prose-strong:font-bold prose-h2:border-b-2 prose-h2:text-3xl";
 
   return (
     <>
@@ -70,7 +70,7 @@ export default function FAQ() {
               Q8: プライバシーはどのように保護されていますか？
             </h2>
             <p>
-              A9:
+              A8:
               Evekiはユーザーのプライバシーを重視し、個人情報の収集や外部への共有は行いません。詳細についてはプライバシーポリシーをご確認ください。
             </p>
             <hr />
@@ -78,7 +78,7 @@ export default function FAQ() {
               Q9: Evekiのサポートは提供されていますか？
             </h2>
             <p>
-              A10:
+              A9:
               はい、Evekiに関するサポートは提供されています。お困りの際は、公式ウェブサイトのヘルプセクションをご参照いただくか、お問い合わせ
             </p>
           </div>

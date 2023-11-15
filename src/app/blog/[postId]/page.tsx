@@ -74,7 +74,7 @@ export default async function StaticDetailPage({
   // ページの生成された時間を取得
 
   const proseSetting: string =
-    "prose text-black prose-h1:text-black prose-h2:text-black prose-a:text-blue-500 prose-strong:text-blue-500 prose-strong:font-bold prose-h2:border-b-2  prose-h2:text-3xl";
+    "prose text-black prose-h1:text-black prose-h2:text-[#583169] prose-h3:text-[#76428C] prose-a:text-blue-500 prose-strong:text-blue-500 prose-strong:font-bold prose-h2:border-b-2  prose-h2:text-3xl";
 
   if (!post) {
     notFound();
