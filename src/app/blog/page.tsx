@@ -1,7 +1,6 @@
 import { getList } from "../../libs/microcms";
 import BlogPost from "@/components/shared/BlogCard";
 
-
 export default async function StaticPage() {
   const { contents } = await getList();
 

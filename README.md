@@ -2,6 +2,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b3901b27-07c1-4bf9-a1e6-b5474ed6b538/deploy-status)](https://app.netlify.com/sites/fascinating-medovik-917fd2/deploys)
 
+
+[![WebSite](https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://i-kabuki.net) [![FaceBook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/kabuki092/) [![AppStore](https://img.shields.io/badge/App_Store-0D96F6?style=for-the-badge&logo=app-store&logoColor=white)](https://apps.apple.com/us/developer/kabuki-iwashita/id1543868361?itsct=apps_box_link&itscg=30200)
+
 ## Getting Started
 
 First, run the development server:

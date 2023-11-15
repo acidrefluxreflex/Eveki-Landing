@@ -19,6 +19,11 @@ const Footer: React.FC = () => {
           <Link href="/contact" className="link-hover link">
             Contact
           </Link>
+          <span className="footer-title">Product</span>
+
+          <a href="https://zeboot.net/" className="link-hover link">
+            Zeboot
+          </a>
         </div>
         <div id="INFO">
           <span className="footer-title">Information</span>
@@ -28,10 +33,15 @@ const Footer: React.FC = () => {
           <Link href="/blog" className="link-hover link">
             Blog
           </Link>
-          <span className="footer-title">Product</span>
-          <a href="https://zeboot.net/" className="link-hover link">
-            Zeboot
-          </a>
+          <Link href="/features" className="link-hover link">
+            Features
+          </Link>
+          <Link href="/info/faq" className="link-hover link">
+            FAQ
+          </Link>
+          <Link href="/info/creative-ideas" className="link-hover link">
+            Creative
+          </Link>
         </div>
 
         <div id="SOCIAL">
