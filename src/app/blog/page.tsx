@@ -1,7 +1,6 @@
 import { getList } from "../../libs/microcms";
-import Pagination from "../../components/shared/Pagination";
 import BlogPost from "@/components/shared/BlogCard";
-import { Metadata } from "next";
+
 
 export default async function StaticPage() {
   const { contents } = await getList();
