@@ -21,6 +21,6 @@ export default function RootLayout({
  
 
   {
-    return <>{children}</>;
+    return {children};
   }
 }

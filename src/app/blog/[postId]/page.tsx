@@ -78,7 +78,7 @@ export default async function StaticDetailPage({
     author: {
       "@type": "Person",
       name: "Kabuki",
-      url: "i-kabuki.com",
+      url: "https://i-kabuki.com",
     },
   };
 

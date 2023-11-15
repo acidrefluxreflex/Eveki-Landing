@@ -3,7 +3,7 @@
 export default function Tutorial() {
     return (
         <div>
-            Tutorial
+            <p>Tutorial</p>
         </div>
     )
 }
