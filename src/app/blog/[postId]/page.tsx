@@ -92,14 +92,16 @@ export default async function StaticDetailPage({
   }
 
   return (
-    <main className="">
+    <>
+    <head>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(jsonld),
         }}
-        key="product-jsonld"
       />
+    </head>
+    <main className="">
       <article>
         <div className="mb-20 max-w-2xl px-3 py-8">
           <div id="IMAGE">
@@ -172,5 +174,6 @@ export default async function StaticDetailPage({
         </div>
       </article>
     </main>
+    </>
   );
 }
